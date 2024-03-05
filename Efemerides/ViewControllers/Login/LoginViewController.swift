@@ -8,12 +8,17 @@
 import UIKit
 
 final class LoginViewController: UIViewController {
-
+    
+    private let person = Person.getPerson()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let tabBarVC = segue.destination as? TabBarViewController
+        tabBarVC?.person = person
+    }
 
 }
 
