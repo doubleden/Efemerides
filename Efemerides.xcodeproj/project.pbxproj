@@ -56,15 +56,55 @@
 		057C47482B97495100EAF225 /* Efemerides */ = {
 			isa = PBXGroup;
 			children = (
-				057C47492B97495100EAF225 /* AppDelegate.swift */,
-				057C474B2B97495100EAF225 /* SceneDelegate.swift */,
-				057C474D2B97495100EAF225 /* ViewController.swift */,
-				057C474F2B97495100EAF225 /* Main.storyboard */,
+				057C475E2B9749A000EAF225 /* ViewControllers */,
+				057C475D2B97498D00EAF225 /* Storyboards */,
+				057C47602B974A2D00EAF225 /* Modals */,
+				057C47612B974A3700EAF225 /* Extensions */,
+				057C475F2B9749C700EAF225 /* Configurations */,
 				057C47522B97495200EAF225 /* Assets.xcassets */,
-				057C47542B97495200EAF225 /* LaunchScreen.storyboard */,
-				057C47572B97495200EAF225 /* Info.plist */,
 			);
 			path = Efemerides;
+			sourceTree = "<group>";
+		};
+		057C475D2B97498D00EAF225 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				057C474F2B97495100EAF225 /* Main.storyboard */,
+				057C47542B97495200EAF225 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		057C475E2B9749A000EAF225 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				057C474D2B97495100EAF225 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		057C475F2B9749C700EAF225 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				057C47492B97495100EAF225 /* AppDelegate.swift */,
+				057C474B2B97495100EAF225 /* SceneDelegate.swift */,
+				057C47572B97495200EAF225 /* Info.plist */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		057C47602B974A2D00EAF225 /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modals;
+			sourceTree = "<group>";
+		};
+		057C47612B974A3700EAF225 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,12 +334,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AM64M5A8BU;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Efemerides/Info.plist;
+				INFOPLIST_FILE = Efemerides/Configurations/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Efemerides;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,9 +348,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = CarlosAidanaDenis.Efemerides;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -322,12 +367,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AM64M5A8BU;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Efemerides/Info.plist;
+				INFOPLIST_FILE = Efemerides/Configurations/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Efemerides;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,9 +381,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = CarlosAidanaDenis.Efemerides;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
