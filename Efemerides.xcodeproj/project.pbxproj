@@ -18,6 +18,8 @@
 		0597280C2B975D250079EF04 /* WelcomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0597280B2B975D250079EF04 /* WelcomeViewController.storyboard */; };
 		0597280E2B975D710079EF04 /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0597280D2B975D710079EF04 /* SearchViewController.storyboard */; };
 		059728102B975DAC0079EF04 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0597280F2B975DAC0079EF04 /* SearchViewController.swift */; };
+		059728122B975E180079EF04 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059728112B975E180079EF04 /* SettingsViewController.storyboard */; };
+		059728142B975E2E0079EF04 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059728132B975E2E0079EF04 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		0597280B2B975D250079EF04 /* WelcomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WelcomeViewController.storyboard; sourceTree = "<group>"; };
 		0597280D2B975D710079EF04 /* SearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
 		0597280F2B975DAC0079EF04 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		059728112B975E180079EF04 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
+		059728132B975E2E0079EF04 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 				057C474F2B97495100EAF225 /* LoginViewController.storyboard */,
 				0597280B2B975D250079EF04 /* WelcomeViewController.storyboard */,
 				0597280D2B975D710079EF04 /* SearchViewController.storyboard */,
+				059728112B975E180079EF04 /* SettingsViewController.storyboard */,
 				057C47542B97495200EAF225 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -94,6 +99,7 @@
 				057C47722B97593800EAF225 /* TabBarViewController.swift */,
 				057C47742B97598900EAF225 /* WelcomeViewController.swift */,
 				0597280F2B975DAC0079EF04 /* SearchViewController.swift */,
+				059728132B975E2E0079EF04 /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -184,6 +190,7 @@
 				057C47562B97495200EAF225 /* LaunchScreen.storyboard in Resources */,
 				057C47532B97495200EAF225 /* Assets.xcassets in Resources */,
 				0597280E2B975D710079EF04 /* SearchViewController.storyboard in Resources */,
+				059728122B975E180079EF04 /* SettingsViewController.storyboard in Resources */,
 				057C47512B97495100EAF225 /* LoginViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +204,7 @@
 			files = (
 				059728102B975DAC0079EF04 /* SearchViewController.swift in Sources */,
 				057C47732B97593800EAF225 /* TabBarViewController.swift in Sources */,
+				059728142B975E2E0079EF04 /* SettingsViewController.swift in Sources */,
 				057C47752B97598900EAF225 /* WelcomeViewController.swift in Sources */,
 				057C474E2B97495100EAF225 /* LoginViewController.swift in Sources */,
 				057C474A2B97495100EAF225 /* AppDelegate.swift in Sources */,
