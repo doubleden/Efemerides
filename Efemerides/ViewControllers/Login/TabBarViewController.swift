@@ -8,21 +8,32 @@
 import UIKit
 
 final class TabBarViewController: UITabBarController {
-
+    
+    var person: Person!
+    
+    private let events = Event.getEvents()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        transferData()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func transferData() {
+        guard let viewControllers else { return }
+        
+        viewControllers.forEach { view in
+            switch view {
+            case let welcomeVC as WelcomeViewController:
+                welcomeVC.person = person
+                welcomeVC.events = events
+            case let searchVC as SearchViewController:
+                searchVC.events = events
+            case let settingsVC as SettingsViewController:
+                settingsVC.person = person
+            default:
+                break
+            }
+        }
     }
-    */
 
 }
