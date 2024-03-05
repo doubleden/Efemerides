@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		0502BEB22B978220006B6433 /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0502BEB02B978220006B6433 /* SearchViewController.storyboard */; };
 		0502BEB42B978281006B6433 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0502BEB32B978281006B6433 /* SettingsViewController.storyboard */; };
+		0502BEB62B9783A0006B6433 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502BEB52B9783A0006B6433 /* User.swift */; };
+		0502BEB82B9783AF006B6433 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502BEB72B9783AF006B6433 /* Event.swift */; };
+		0502BEBB2B9783CB006B6433 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502BEBA2B9783CB006B6433 /* DataStore.swift */; };
+		0502BEBD2B97844E006B6433 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502BEBC2B97844E006B6433 /* ResultViewController.swift */; };
 		057C474A2B97495100EAF225 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057C47492B97495100EAF225 /* AppDelegate.swift */; };
 		057C474C2B97495100EAF225 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057C474B2B97495100EAF225 /* SceneDelegate.swift */; };
 		057C474E2B97495100EAF225 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057C474D2B97495100EAF225 /* LoginViewController.swift */; };
@@ -25,6 +29,10 @@
 /* Begin PBXFileReference section */
 		0502BEB12B978220006B6433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Efemerides/Storyboards/Base.lproj/SearchViewController.storyboard; sourceTree = "<group>"; };
 		0502BEB32B978281006B6433 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
+		0502BEB52B9783A0006B6433 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0502BEB72B9783AF006B6433 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		0502BEBA2B9783CB006B6433 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		0502BEBC2B97844E006B6433 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		057C47462B97495100EAF225 /* Efemerides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Efemerides.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		057C47492B97495100EAF225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		057C474B2B97495100EAF225 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +59,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0502BEB92B9783B7006B6433 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0502BEBA2B9783CB006B6433 /* DataStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0502BEBE2B97846F006B6433 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				057C474D2B97495100EAF225 /* LoginViewController.swift */,
+				057C47722B97593800EAF225 /* TabBarViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		0502BEBF2B978486006B6433 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				057C47742B97598900EAF225 /* WelcomeViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		0502BEC02B978499006B6433 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				0597280F2B975DAC0079EF04 /* SearchViewController.swift */,
+				0502BEBC2B97844E006B6433 /* ResultViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		0502BEC12B9784A8006B6433 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				059728132B975E2E0079EF04 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		057C473D2B97495100EAF225 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +123,7 @@
 				057C475E2B9749A000EAF225 /* ViewControllers */,
 				057C475D2B97498D00EAF225 /* Storyboards */,
 				057C47602B974A2D00EAF225 /* Modals */,
+				0502BEB92B9783B7006B6433 /* Services */,
 				057C47612B974A3700EAF225 /* Extensions */,
 				057C475F2B9749C700EAF225 /* Configurations */,
 				057C47522B97495200EAF225 /* Assets.xcassets */,
@@ -95,11 +146,10 @@
 		057C475E2B9749A000EAF225 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				057C474D2B97495100EAF225 /* LoginViewController.swift */,
-				057C47722B97593800EAF225 /* TabBarViewController.swift */,
-				057C47742B97598900EAF225 /* WelcomeViewController.swift */,
-				0597280F2B975DAC0079EF04 /* SearchViewController.swift */,
-				059728132B975E2E0079EF04 /* SettingsViewController.swift */,
+				0502BEBE2B97846F006B6433 /* Login */,
+				0502BEBF2B978486006B6433 /* Welcome */,
+				0502BEC02B978499006B6433 /* Search */,
+				0502BEC12B9784A8006B6433 /* Settings */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -117,6 +167,8 @@
 		057C47602B974A2D00EAF225 /* Modals */ = {
 			isa = PBXGroup;
 			children = (
+				0502BEB52B9783A0006B6433 /* User.swift */,
+				0502BEB72B9783AF006B6433 /* Event.swift */,
 			);
 			path = Modals;
 			sourceTree = "<group>";
@@ -203,12 +255,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				059728102B975DAC0079EF04 /* SearchViewController.swift in Sources */,
+				0502BEB82B9783AF006B6433 /* Event.swift in Sources */,
 				057C47732B97593800EAF225 /* TabBarViewController.swift in Sources */,
+				0502BEBB2B9783CB006B6433 /* DataStore.swift in Sources */,
 				059728142B975E2E0079EF04 /* SettingsViewController.swift in Sources */,
 				057C47752B97598900EAF225 /* WelcomeViewController.swift in Sources */,
+				0502BEB62B9783A0006B6433 /* User.swift in Sources */,
 				057C474E2B97495100EAF225 /* LoginViewController.swift in Sources */,
 				057C474A2B97495100EAF225 /* AppDelegate.swift in Sources */,
 				057C474C2B97495100EAF225 /* SceneDelegate.swift in Sources */,
+				0502BEBD2B97844E006B6433 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

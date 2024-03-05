@@ -1,5 +1,5 @@
 //
-//  WelcomeViewController.swift
+//  TabBarViewController.swift
 //  Efemerides
 //
 //  Created by Denis Denisov on 5/3/24.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+final class TabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
 
