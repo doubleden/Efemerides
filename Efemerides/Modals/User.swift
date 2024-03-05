@@ -26,7 +26,7 @@ struct Person {
         Person(
             name: "Alexei",
             surname: "Efimov",
-            birthdate: "1.1.1988"
+            birthdate: "01.01.1988"
         )
     }
 }
