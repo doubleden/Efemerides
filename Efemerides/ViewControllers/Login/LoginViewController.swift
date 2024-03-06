@@ -54,17 +54,26 @@ final class LoginViewController: UIViewController {
         }
     }
     
-}
-
-private extension LoginViewController {
-    func setupUITextFields() {
+    private func textFieldsUISetup() {
         usernameTF.layer.borderWidth = 2
         passwordTF.layer.borderWidth = 2
-        
         usernameTF.layer.cornerRadius = 5
         passwordTF.layer.cornerRadius = 5
-        
         usernameTF.layer.borderColor = UIColor(named: "mainYellow")?.cgColor
         passwordTF.layer.borderColor = UIColor(named: "mainYellow")?.cgColor
+    }
+}
+
+// MARK: - UITextFieldDelegate
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField.tag == 0 {
+            passwordTF.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        
+        return true
     }
 }
