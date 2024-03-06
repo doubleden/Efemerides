@@ -9,7 +9,14 @@ import Foundation
 struct Event {
     let title: String
     let description: String
-    let Date: String
+    
+    let day: String
+    let month: String
+    let year: String
+    
+    var date: String {
+        "\(day).\(month).\(year)"
+    }
     
     static func getEvents() -> [Event] {
         let data = DataStore.shared
@@ -20,7 +27,9 @@ struct Event {
                 Event(
                     title: event.title,
                     description: event.description,
-                    Date: event.date
+                    day: event.day,
+                    month: event.month,
+                    year: event.year
                 )
             )
         }
