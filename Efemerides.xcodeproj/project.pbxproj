@@ -24,6 +24,7 @@
 		059728102B975DAC0079EF04 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0597280F2B975DAC0079EF04 /* SearchViewController.swift */; };
 		059728142B975E2E0079EF04 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059728132B975E2E0079EF04 /* SettingsViewController.swift */; };
 		0597281C2B97809E0079EF04 /* WelcomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0597281A2B97809E0079EF04 /* WelcomeViewController.storyboard */; };
+		05B694A72B988050003A92B1 /* ShowAlert + UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B694A62B988050003A92B1 /* ShowAlert + UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		0597280F2B975DAC0079EF04 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		059728132B975E2E0079EF04 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0597281B2B97809E0079EF04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Efemerides/Storyboards/Base.lproj/WelcomeViewController.storyboard; sourceTree = "<group>"; };
+		05B694A62B988050003A92B1 /* ShowAlert + UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShowAlert + UIViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +126,7 @@
 				057C475D2B97498D00EAF225 /* Storyboards */,
 				057C47602B974A2D00EAF225 /* Modals */,
 				0502BEB92B9783B7006B6433 /* Services */,
-				057C47612B974A3700EAF225 /* Extensions */,
+				05B694A52B988039003A92B1 /* Extensions */,
 				057C475F2B9749C700EAF225 /* Configurations */,
 				057C47522B97495200EAF225 /* Assets.xcassets */,
 			);
@@ -173,9 +175,10 @@
 			path = Modals;
 			sourceTree = "<group>";
 		};
-		057C47612B974A3700EAF225 /* Extensions */ = {
+		05B694A52B988039003A92B1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				05B694A62B988050003A92B1 /* ShowAlert + UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				057C474E2B97495100EAF225 /* LoginViewController.swift in Sources */,
 				057C474A2B97495100EAF225 /* AppDelegate.swift in Sources */,
 				057C474C2B97495100EAF225 /* SceneDelegate.swift in Sources */,
+				05B694A72B988050003A92B1 /* ShowAlert + UIViewController.swift in Sources */,
 				0502BEBD2B97844E006B6433 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
