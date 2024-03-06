@@ -13,14 +13,21 @@ struct User {
     let person: Person
     
     static func getUser() -> User {
-        User(username: "User", password: "1111", person: Person.getPerson() )
+        User(username: "User", password: "1111", person: Person.getPerson())
     }
 }
 
 struct Person {
     let name: String
     let surname: String
-    let birthdate: String
+    
+    let day: String
+    let month: String
+    let year: String
+    
+    var birthdate: String {
+        "\(day).\(month).\(year)"
+    }
     
     var fullname: String {
         "\(name) \(surname)"
@@ -30,7 +37,9 @@ struct Person {
         Person(
             name: "Alexei",
             surname: "Efimov",
-            birthdate: "01.01.1988"
+            day: "01",
+            month: "02",
+            year: "1998"
         )
     }
 }
