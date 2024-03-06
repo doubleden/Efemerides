@@ -22,6 +22,10 @@ struct Person {
     let surname: String
     let birthdate: String
     
+    var fullname: String {
+        "\(name) \(surname)"
+    }
+    
     static func getPerson() -> Person {
         Person(
             name: "Alexei",
