@@ -21,12 +21,12 @@ struct Person {
     let name: String
     let surname: String
     
-    let day: String
-    let month: String
-    let year: String
+    let dayOfBirth: String
+    let monthOfBirth: String
+    let yearOfBirth: String
     
     var birthdate: String {
-        "\(day).\(month).\(year)"
+        "\(dayOfBirth).\(monthOfBirth).\(yearOfBirth)"
     }
     
     var fullname: String {
@@ -37,9 +37,9 @@ struct Person {
         Person(
             name: "Alexei",
             surname: "Efimov",
-            day: "05",
-            month: "01",
-            year: "1998"
+            dayOfBirth: "05",
+            monthOfBirth: "01",
+            yearOfBirth: "1998"
         )
     }
 }
