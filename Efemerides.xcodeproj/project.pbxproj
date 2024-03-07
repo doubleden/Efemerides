@@ -13,6 +13,7 @@
 		0502BEB82B9783AF006B6433 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502BEB72B9783AF006B6433 /* Event.swift */; };
 		0502BEBB2B9783CB006B6433 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502BEBA2B9783CB006B6433 /* DataStore.swift */; };
 		0502BEBD2B97844E006B6433 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0502BEBC2B97844E006B6433 /* ResultViewController.swift */; };
+		05192D7B2B99F5EF000FE5ED /* EventSearchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05192D7A2B99F5EF000FE5ED /* EventSearchable.swift */; };
 		057C474A2B97495100EAF225 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057C47492B97495100EAF225 /* AppDelegate.swift */; };
 		057C474C2B97495100EAF225 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057C474B2B97495100EAF225 /* SceneDelegate.swift */; };
 		057C474E2B97495100EAF225 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057C474D2B97495100EAF225 /* LoginViewController.swift */; };
@@ -34,6 +35,7 @@
 		0502BEB72B9783AF006B6433 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		0502BEBA2B9783CB006B6433 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		0502BEBC2B97844E006B6433 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		05192D7A2B99F5EF000FE5ED /* EventSearchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSearchable.swift; sourceTree = "<group>"; };
 		057C47462B97495100EAF225 /* Efemerides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Efemerides.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		057C47492B97495100EAF225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		057C474B2B97495100EAF225 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,14 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		05192D792B99F5D9000FE5ED /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				05192D7A2B99F5EF000FE5ED /* EventSearchable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		057C473D2B97495100EAF225 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +137,7 @@
 				057C47602B974A2D00EAF225 /* Modals */,
 				0502BEB92B9783B7006B6433 /* Services */,
 				05B694A52B988039003A92B1 /* Extensions */,
+				05192D792B99F5D9000FE5ED /* Protocols */,
 				057C475F2B9749C700EAF225 /* Configurations */,
 				057C47522B97495200EAF225 /* Assets.xcassets */,
 			);
@@ -259,6 +270,7 @@
 			files = (
 				059728102B975DAC0079EF04 /* SearchViewController.swift in Sources */,
 				0502BEB82B9783AF006B6433 /* Event.swift in Sources */,
+				05192D7B2B99F5EF000FE5ED /* EventSearchable.swift in Sources */,
 				057C47732B97593800EAF225 /* TabBarViewController.swift in Sources */,
 				0502BEBB2B9783CB006B6433 /* DataStore.swift in Sources */,
 				059728142B975E2E0079EF04 /* SettingsViewController.swift in Sources */,
