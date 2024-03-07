@@ -37,8 +37,8 @@ struct Person {
         Person(
             name: "Alexei",
             surname: "Efimov",
-            day: "01",
-            month: "02",
+            day: "05",
+            month: "01",
             year: "1998"
         )
     }

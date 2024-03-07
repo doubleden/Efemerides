@@ -6,7 +6,6 @@
 //
 
 protocol EventSearchable {
-    func findEvent(in events: [Event], by day: String, and month: String) -> Event
 }
 
 extension EventSearchable {
