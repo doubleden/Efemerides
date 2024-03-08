@@ -32,6 +32,6 @@ final class WelcomeViewController: UIViewController, EventSearchable {
         imageView.image = UIImage(named: event?.image ?? "")
        
         
-        eventsLabel.text = "\(event?.day ?? "").\(event?.month ?? "").\(event?.year ?? "")\n\n\(event?.title ?? "")\n\n\(event?.description ?? "")"
+        eventsLabel.text = "\(event?.year ?? "")-ом в этот же день было...\n\n\(event?.title ?? "")\n\n\(event?.description ?? "")"
     }
 }
