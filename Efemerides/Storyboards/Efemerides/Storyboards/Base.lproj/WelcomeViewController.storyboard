@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7uU-dH-kSw">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,16 +13,49 @@
             <objects>
                 <viewController storyboardIdentifier="WelcomeViewController" title="WelcomeViewController" id="7uU-dH-kSw" customClass="WelcomeViewController" customModule="Efemerides" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wz2-Hm-Cfi">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decription Event" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sld-xe-msC">
+                                <rect key="frame" x="20" y="213" width="335" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="ZPZ-jJ-PU3">
+                                <rect key="frame" x="20" y="93" width="335" height="82"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2Y-c1-GQn">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Birthday is on 23th of December!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rcy-ar-8ut">
+                                        <rect key="frame" x="0.0" y="59" width="335" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="gJ6-sD-Ywn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZPZ-jJ-PU3" firstAttribute="centerX" secondItem="gJ6-sD-Ywn" secondAttribute="centerX" id="4pO-BV-J3M"/>
+                            <constraint firstItem="ZPZ-jJ-PU3" firstAttribute="top" secondItem="gJ6-sD-Ywn" secondAttribute="top" constant="73" id="Dm2-OR-amc"/>
+                            <constraint firstItem="ZPZ-jJ-PU3" firstAttribute="leading" secondItem="gJ6-sD-Ywn" secondAttribute="leading" constant="20" id="Ore-c7-6kl"/>
+                            <constraint firstItem="gJ6-sD-Ywn" firstAttribute="trailing" secondItem="Sld-xe-msC" secondAttribute="trailing" constant="20" id="h30-vZ-GyO"/>
+                            <constraint firstItem="Sld-xe-msC" firstAttribute="leading" secondItem="gJ6-sD-Ywn" secondAttribute="leading" constant="20" id="pCE-5B-63h"/>
+                            <constraint firstItem="Sld-xe-msC" firstAttribute="top" secondItem="Rcy-ar-8ut" secondAttribute="bottom" constant="38" id="tFt-hG-OUM"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Welcome" image="person" catalog="system" id="Hn4-LO-fxY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gwy-mY-BZd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1971" y="-197"/>
+            <point key="canvasLocation" x="1970.4000000000001" y="-197.45127436281859"/>
         </scene>
     </scenes>
     <resources>

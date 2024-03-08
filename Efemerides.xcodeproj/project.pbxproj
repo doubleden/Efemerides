@@ -21,11 +21,11 @@
 		057C47532B97495200EAF225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 057C47522B97495200EAF225 /* Assets.xcassets */; };
 		057C47562B97495200EAF225 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057C47542B97495200EAF225 /* LaunchScreen.storyboard */; };
 		057C47732B97593800EAF225 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057C47722B97593800EAF225 /* TabBarViewController.swift */; };
-		057C47752B97598900EAF225 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057C47742B97598900EAF225 /* WelcomeViewController.swift */; };
 		059728102B975DAC0079EF04 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0597280F2B975DAC0079EF04 /* SearchViewController.swift */; };
 		059728142B975E2E0079EF04 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059728132B975E2E0079EF04 /* SettingsViewController.swift */; };
 		0597281C2B97809E0079EF04 /* WelcomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0597281A2B97809E0079EF04 /* WelcomeViewController.storyboard */; };
 		05B694A72B988050003A92B1 /* ShowAlert + UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B694A62B988050003A92B1 /* ShowAlert + UIViewController.swift */; };
+		4F289E642B9A7E9500A5EDC6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F289E632B9A7E9500A5EDC6 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,11 +45,11 @@
 		057C47552B97495200EAF225 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		057C47572B97495200EAF225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		057C47722B97593800EAF225 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		057C47742B97598900EAF225 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		0597280F2B975DAC0079EF04 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		059728132B975E2E0079EF04 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0597281B2B97809E0079EF04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Efemerides/Storyboards/Base.lproj/WelcomeViewController.storyboard; sourceTree = "<group>"; };
 		05B694A62B988050003A92B1 /* ShowAlert + UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShowAlert + UIViewController.swift"; sourceTree = "<group>"; };
+		4F289E632B9A7E9500A5EDC6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 		0502BEBF2B978486006B6433 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
-				057C47742B97598900EAF225 /* WelcomeViewController.swift */,
+				4F289E632B9A7E9500A5EDC6 /* WelcomeViewController.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -274,13 +274,13 @@
 				057C47732B97593800EAF225 /* TabBarViewController.swift in Sources */,
 				0502BEBB2B9783CB006B6433 /* DataStore.swift in Sources */,
 				059728142B975E2E0079EF04 /* SettingsViewController.swift in Sources */,
-				057C47752B97598900EAF225 /* WelcomeViewController.swift in Sources */,
 				0502BEB62B9783A0006B6433 /* User.swift in Sources */,
 				057C474E2B97495100EAF225 /* LoginViewController.swift in Sources */,
 				057C474A2B97495100EAF225 /* AppDelegate.swift in Sources */,
 				057C474C2B97495100EAF225 /* SceneDelegate.swift in Sources */,
 				05B694A72B988050003A92B1 /* ShowAlert + UIViewController.swift in Sources */,
 				0502BEBD2B97844E006B6433 /* ResultViewController.swift in Sources */,
+				4F289E642B9A7E9500A5EDC6 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
