@@ -15,6 +15,7 @@ final class WelcomeViewController: UIViewController, EventSearchable {
     @IBOutlet var welcomeUserLabel: UILabel!
     @IBOutlet var birthdayLabel: UILabel!
     @IBOutlet var eventsLabel: UITextView!
+    @IBOutlet var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ final class WelcomeViewController: UIViewController, EventSearchable {
         
         let event = findEvent(in: events, byDay: person.dayOfBirth, andMonth: person.monthOfBirth)
         
+        imageView.image = UIImage(named: event?.image ?? "")
         eventsLabel.text = "\(event?.day ?? "").\(event?.month ?? "").\(event?.year ?? "")\n\n\(event?.title ?? "")\n\n\(event?.description ?? "")"
         eventsLabel.layer.cornerRadius = 10
         eventsLabel.layer.masksToBounds = true
