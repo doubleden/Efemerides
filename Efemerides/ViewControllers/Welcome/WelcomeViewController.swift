@@ -14,9 +14,7 @@ final class WelcomeViewController: UIViewController, EventSearchable {
     
     @IBOutlet var welcomeUserLabel: UILabel!
     @IBOutlet var birthdayLabel: UILabel!
-    @IBOutlet var eventsLabel: UILabel!
-    
-    
+    @IBOutlet var eventsLabel: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +22,8 @@ final class WelcomeViewController: UIViewController, EventSearchable {
         birthdayLabel.text = "Your Birthday is on \(person.birthdate)"
         
         let event = findEvent(in: events, byDay: person.dayOfBirth, andMonth: person.monthOfBirth)
-        
-        eventsLabel.text = "\(event?.day ?? "").\(event?.month ?? "").\(event?.year ?? "")\n \(event?.title ?? "")\n \(event?.description ?? "")"
+
+        eventsLabel.text = "\(event?.day ?? "").\(event?.month ?? "").\(event?.year ?? "")\n\n\(event?.title ?? "")\n\n\(event?.description ?? "")"
+       
     }
 }
