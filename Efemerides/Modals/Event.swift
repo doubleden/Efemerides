@@ -8,7 +8,6 @@ import Foundation
 
 struct Event {
     let title: String
-    let image: String
     let description: String
     
     let day: String
@@ -27,7 +26,6 @@ struct Event {
             result.append(
                 Event(
                     title: event.title,
-                    image: event.image,
                     description: event.description,
                     day: event.day,
                     month: event.month,
