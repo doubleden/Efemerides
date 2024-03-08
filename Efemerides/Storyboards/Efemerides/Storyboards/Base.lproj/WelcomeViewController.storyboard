@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,64 +17,90 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="ZPZ-jJ-PU3">
-                                <rect key="frame" x="16" y="60" width="343" height="118.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kc9-Jy-gps">
+                                <rect key="frame" x="16" y="195" width="343" height="472"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2Y-c1-GQn">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="41"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ZE-2d-Ejd">
+                                        <rect key="frame" x="8" y="223" width="327" height="232"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jEf-He-EbZ">
+                                                <rect key="frame" x="9" y="7" width="309" height="274"/>
+                                                <color key="backgroundColor" name="mainYellow"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="274" id="Nuu-JF-KLt"/>
+                                                    <constraint firstAttribute="width" constant="309" id="y34-et-LF2"/>
+                                                </constraints>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="jEf-He-EbZ" firstAttribute="leading" secondItem="QQf-AH-hdC" secondAttribute="leading" constant="9" id="Nyo-Ki-jba"/>
+                                            <constraint firstItem="jEf-He-EbZ" firstAttribute="centerX" secondItem="2ZE-2d-Ejd" secondAttribute="centerX" id="VKT-cF-lnJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="jEf-He-EbZ" secondAttribute="bottom" constant="-50" id="aQ4-Bx-9V2"/>
+                                            <constraint firstItem="jEf-He-EbZ" firstAttribute="trailing" secondItem="2ZE-2d-Ejd" secondAttribute="trailingMargin" id="op3-RL-vAz"/>
+                                        </constraints>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="F4L-P0-KL4"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="QQf-AH-hdC"/>
+                                    </scrollView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IaT-ER-SRq">
+                                        <rect key="frame" x="47" y="37" width="249" height="161"/>
+                                        <color key="backgroundColor" name="mainYellow"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="161" id="GhE-If-UHe"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" name="mainYellow"/>
+                                <constraints>
+                                    <constraint firstItem="IaT-ER-SRq" firstAttribute="centerX" secondItem="kc9-Jy-gps" secondAttribute="centerX" id="VOa-Zm-Om3"/>
+                                    <constraint firstItem="2ZE-2d-Ejd" firstAttribute="top" secondItem="IaT-ER-SRq" secondAttribute="bottom" constant="25" id="Xs4-Df-Doq"/>
+                                    <constraint firstItem="IaT-ER-SRq" firstAttribute="top" secondItem="kc9-Jy-gps" secondAttribute="top" constant="37" id="gM0-Gb-xYv"/>
+                                    <constraint firstItem="IaT-ER-SRq" firstAttribute="centerX" secondItem="2ZE-2d-Ejd" secondAttribute="centerX" id="gqw-Uf-gy2"/>
+                                    <constraint firstItem="jEf-He-EbZ" firstAttribute="top" secondItem="IaT-ER-SRq" secondAttribute="bottom" constant="32" id="mbI-XW-y7x"/>
+                                    <constraint firstAttribute="bottom" secondItem="2ZE-2d-Ejd" secondAttribute="bottom" constant="17" id="sRU-L1-oPd"/>
+                                    <constraint firstItem="IaT-ER-SRq" firstAttribute="leading" secondItem="kc9-Jy-gps" secondAttribute="leading" constant="47" id="wXk-od-1M3"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="ZPZ-jJ-PU3">
+                                <rect key="frame" x="26" y="86" width="323" height="82"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2Y-c1-GQn">
+                                        <rect key="frame" x="0.0" y="0.0" width="323" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" name="mainYellow"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Birthday is on 23th of December!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rcy-ar-8ut">
-                                        <rect key="frame" x="0.0" y="64" width="343" height="54.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Birthday is on 23th of December!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rcy-ar-8ut">
+                                        <rect key="frame" x="0.0" y="59" width="323" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <color key="textColor" name="mainFont"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ZE-2d-Ejd">
-                                <rect key="frame" x="16" y="203.5" width="343" height="443.5"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEf-He-EbZ">
-                                        <rect key="frame" x="10" y="8" width="323" height="427.5"/>
-                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
-                                        <color key="textColor" name="mainFont"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                                <color key="backgroundColor" name="mainYellow"/>
-                                <constraints>
-                                    <constraint firstItem="jEf-He-EbZ" firstAttribute="centerX" secondItem="2ZE-2d-Ejd" secondAttribute="centerX" id="Apo-Ni-VOd"/>
-                                    <constraint firstItem="jEf-He-EbZ" firstAttribute="top" secondItem="2ZE-2d-Ejd" secondAttribute="topMargin" id="RB3-nm-S7Y"/>
-                                    <constraint firstItem="jEf-He-EbZ" firstAttribute="centerY" secondItem="2ZE-2d-Ejd" secondAttribute="centerY" id="RUs-HR-g4f"/>
-                                    <constraint firstAttribute="trailing" secondItem="jEf-He-EbZ" secondAttribute="trailing" constant="10" id="Vd9-ne-bVL"/>
-                                    <constraint firstItem="jEf-He-EbZ" firstAttribute="leading" secondItem="QQf-AH-hdC" secondAttribute="leading" constant="10" id="jbU-Lm-z6z"/>
-                                    <constraint firstItem="jEf-He-EbZ" firstAttribute="bottom" secondItem="2ZE-2d-Ejd" secondAttribute="bottomMargin" id="orq-wN-WVg"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="F4L-P0-KL4"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="QQf-AH-hdC"/>
-                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gJ6-sD-Ywn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ZPZ-jJ-PU3" firstAttribute="top" secondItem="gJ6-sD-Ywn" secondAttribute="top" constant="40" id="7uv-zs-tfy"/>
-                            <constraint firstItem="gJ6-sD-Ywn" firstAttribute="trailing" secondItem="ZPZ-jJ-PU3" secondAttribute="trailing" constant="16" id="Dsz-7j-ZC6"/>
-                            <constraint firstItem="gJ6-sD-Ywn" firstAttribute="trailing" secondItem="2ZE-2d-Ejd" secondAttribute="trailing" constant="16" id="HBM-gU-L4o"/>
-                            <constraint firstItem="gJ6-sD-Ywn" firstAttribute="bottom" secondItem="2ZE-2d-Ejd" secondAttribute="bottom" constant="20" id="esF-yl-b4K"/>
-                            <constraint firstItem="ZPZ-jJ-PU3" firstAttribute="leading" secondItem="gJ6-sD-Ywn" secondAttribute="leading" constant="16" id="g5V-Gy-y2k"/>
-                            <constraint firstItem="2ZE-2d-Ejd" firstAttribute="leading" secondItem="gJ6-sD-Ywn" secondAttribute="leading" constant="16" id="hdW-T7-85F"/>
-                            <constraint firstItem="2ZE-2d-Ejd" firstAttribute="top" secondItem="ZPZ-jJ-PU3" secondAttribute="bottom" constant="25" id="pz6-im-Jh0"/>
+                            <constraint firstItem="kc9-Jy-gps" firstAttribute="top" secondItem="wz2-Hm-Cfi" secondAttribute="top" constant="195" id="35K-hO-3bC"/>
+                            <constraint firstItem="kc9-Jy-gps" firstAttribute="leading" secondItem="gJ6-sD-Ywn" secondAttribute="leading" constant="16" id="Bpf-bA-Dqh"/>
+                            <constraint firstItem="kc9-Jy-gps" firstAttribute="centerX" secondItem="wz2-Hm-Cfi" secondAttribute="centerX" id="H5o-NE-Wtn"/>
+                            <constraint firstItem="gJ6-sD-Ywn" firstAttribute="trailing" secondItem="kc9-Jy-gps" secondAttribute="trailing" constant="16" id="JZm-jo-B82"/>
+                            <constraint firstItem="kc9-Jy-gps" firstAttribute="top" secondItem="ZPZ-jJ-PU3" secondAttribute="bottom" constant="27" id="O8E-f6-bf0"/>
+                            <constraint firstItem="ZPZ-jJ-PU3" firstAttribute="leading" secondItem="gJ6-sD-Ywn" secondAttribute="leading" constant="26" id="WBO-2m-EZZ"/>
+                            <constraint firstItem="kc9-Jy-gps" firstAttribute="bottom" secondItem="gJ6-sD-Ywn" secondAttribute="bottom" id="YF2-be-Tcv"/>
+                            <constraint firstItem="ZPZ-jJ-PU3" firstAttribute="centerX" secondItem="gJ6-sD-Ywn" secondAttribute="centerX" id="oDt-af-TwD"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Welcome" image="person" catalog="system" id="Hn4-LO-fxY"/>
                     <connections>
                         <outlet property="birthdayLabel" destination="Rcy-ar-8ut" id="0ni-PZ-gwc"/>
                         <outlet property="eventsLabel" destination="jEf-He-EbZ" id="U3E-I1-zk2"/>
-                        <outlet property="eventsScrollView" destination="2ZE-2d-Ejd" id="y5Z-LC-wxY"/>
+                        <outlet property="imageView" destination="IaT-ER-SRq" id="P00-vm-4Oz"/>
+                        <outlet property="miniView" destination="kc9-Jy-gps" id="5ba-A2-rRQ"/>
                         <outlet property="welcomeUserLabel" destination="c2Y-c1-GQn" id="5J1-Fv-ixb"/>
                     </connections>
                 </viewController>
@@ -91,6 +117,9 @@
         <namedColor name="mainYellow">
             <color red="0.96470588235294119" green="0.81568627450980391" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
