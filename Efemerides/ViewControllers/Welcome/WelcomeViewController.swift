@@ -22,8 +22,10 @@ final class WelcomeViewController: UIViewController, EventSearchable {
         birthdayLabel.text = "Your Birthday is on \(person.birthdate)"
         
         let event = findEvent(in: events, byDay: person.dayOfBirth, andMonth: person.monthOfBirth)
-
+        
         eventsLabel.text = "\(event?.day ?? "").\(event?.month ?? "").\(event?.year ?? "")\n\n\(event?.title ?? "")\n\n\(event?.description ?? "")"
+        eventsLabel.layer.cornerRadius = 10
+        eventsLabel.layer.masksToBounds = true
        
     }
 }
