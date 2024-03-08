@@ -46,7 +46,7 @@
                                         <viewLayoutGuide key="frameLayoutGuide" id="QQf-AH-hdC"/>
                                     </scrollView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IaT-ER-SRq">
-                                        <rect key="frame" x="82" y="36" width="179" height="161"/>
+                                        <rect key="frame" x="47" y="37" width="249" height="161"/>
                                         <color key="backgroundColor" name="mainYellow"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="161" id="GhE-If-UHe"/>
@@ -56,12 +56,12 @@
                                 <color key="backgroundColor" name="mainYellow"/>
                                 <constraints>
                                     <constraint firstItem="IaT-ER-SRq" firstAttribute="centerX" secondItem="kc9-Jy-gps" secondAttribute="centerX" id="VOa-Zm-Om3"/>
-                                    <constraint firstItem="2ZE-2d-Ejd" firstAttribute="top" secondItem="IaT-ER-SRq" secondAttribute="bottom" constant="26" id="Xs4-Df-Doq"/>
-                                    <constraint firstItem="IaT-ER-SRq" firstAttribute="top" secondItem="kc9-Jy-gps" secondAttribute="top" constant="36" id="gM0-Gb-xYv"/>
+                                    <constraint firstItem="2ZE-2d-Ejd" firstAttribute="top" secondItem="IaT-ER-SRq" secondAttribute="bottom" constant="25" id="Xs4-Df-Doq"/>
+                                    <constraint firstItem="IaT-ER-SRq" firstAttribute="top" secondItem="kc9-Jy-gps" secondAttribute="top" constant="37" id="gM0-Gb-xYv"/>
                                     <constraint firstItem="IaT-ER-SRq" firstAttribute="centerX" secondItem="2ZE-2d-Ejd" secondAttribute="centerX" id="gqw-Uf-gy2"/>
-                                    <constraint firstItem="jEf-He-EbZ" firstAttribute="top" secondItem="IaT-ER-SRq" secondAttribute="bottom" constant="33" id="mbI-XW-y7x"/>
+                                    <constraint firstItem="jEf-He-EbZ" firstAttribute="top" secondItem="IaT-ER-SRq" secondAttribute="bottom" constant="32" id="mbI-XW-y7x"/>
                                     <constraint firstAttribute="bottom" secondItem="2ZE-2d-Ejd" secondAttribute="bottom" constant="17" id="sRU-L1-oPd"/>
-                                    <constraint firstItem="IaT-ER-SRq" firstAttribute="leading" secondItem="kc9-Jy-gps" secondAttribute="leading" constant="82" id="wXk-od-1M3"/>
+                                    <constraint firstItem="IaT-ER-SRq" firstAttribute="leading" secondItem="kc9-Jy-gps" secondAttribute="leading" constant="47" id="wXk-od-1M3"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="ZPZ-jJ-PU3">
