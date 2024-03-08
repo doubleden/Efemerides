@@ -9,7 +9,7 @@ import UIKit
 
 extension UIViewController {
     
-    private func showAlert(
+    func showAlert(
         withTitle tittle: String,
         andMessage message: String,
         completion: (() -> Void)? = nil) {
