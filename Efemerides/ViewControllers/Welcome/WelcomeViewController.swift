@@ -9,17 +9,21 @@ import UIKit
 
 final class WelcomeViewController: UIViewController, EventSearchable {
     
-    var person: Person!
-    var events: [Event]!
-    
     @IBOutlet var welcomeUserLabel: UILabel!
     @IBOutlet var birthdayLabel: UILabel!
     @IBOutlet var eventsLabel: UITextView!
-    @IBOutlet var imageView: UIImageView!
-    @IBOutlet var miniView: UIView!
+
+    @IBOutlet var eventsScrollView: UIScrollView!
+    
+    var person: Person!
+    var events: [Event]!
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        eventsScrollView.layer.cornerRadius = 10
+        
         welcomeUserLabel.text = "Welcome, \(person.fullname)!"
         birthdayLabel.text = "Your Birthday is on \(person.birthdate)"
         
@@ -28,10 +32,8 @@ final class WelcomeViewController: UIViewController, EventSearchable {
         imageView.layer.cornerRadius = imageView.frame.height / 10
         
         let event = findEvent(in: events, byDay: person.dayOfBirth, andMonth: person.monthOfBirth)
-        
-        imageView.image = UIImage(named: event?.image ?? "")
-       
-        
-        eventsLabel.text = "\(event?.year ?? "")-ом в этот же день было...\n\n\(event?.title ?? "")\n\n\(event?.description ?? "")"
+
+        eventsLabel.text = "В этот день было - \(event?.title ?? "")\n\n\(event?.description ?? "")"
+
     }
 }
