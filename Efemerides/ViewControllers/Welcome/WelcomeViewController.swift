@@ -12,9 +12,9 @@ final class WelcomeViewController: UIViewController, EventSearchable {
     var person: Person!
     var events: [Event]!
     
-    @IBOutlet weak var welcomeUserLabel: UILabel!
-    @IBOutlet weak var birthdayLabel: UILabel!
-    @IBOutlet weak var eventsLabel: UILabel!
+    @IBOutlet var welcomeUserLabel: UILabel!
+    @IBOutlet var birthdayLabel: UILabel!
+    @IBOutlet var eventsLabel: UILabel!
     
     
     

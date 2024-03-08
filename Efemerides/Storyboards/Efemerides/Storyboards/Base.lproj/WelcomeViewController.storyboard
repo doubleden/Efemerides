@@ -52,6 +52,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Welcome" image="person" catalog="system" id="Hn4-LO-fxY"/>
+                    <connections>
+                        <outlet property="birthdayLabel" destination="Rcy-ar-8ut" id="0ni-PZ-gwc"/>
+                        <outlet property="eventsLabel" destination="Sld-xe-msC" id="4g2-VF-IEL"/>
+                        <outlet property="welcomeUserLabel" destination="c2Y-c1-GQn" id="5J1-Fv-ixb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gwy-mY-BZd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
