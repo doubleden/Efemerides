@@ -9,11 +9,12 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    @IBOutlet weak var darkModeSwitch: UISwitch!
-    @IBOutlet weak var birthDatePicker: UIDatePicker!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var notificationsSwitch: UISwitch!
-    @IBOutlet weak var brightnessSlider: UISlider!
+    @IBOutlet var userName: UILabel!
+    @IBOutlet var darkModeSwitch: UISwitch!
+    @IBOutlet var birthDatePicker: UIDatePicker!
+    @IBOutlet var emailTextField: UITextField!
+    @IBOutlet var notificationsSwitch: UISwitch!
+    @IBOutlet var brightnessSlider: UISlider!
     
     var person: Person!
     
@@ -27,7 +28,8 @@ class SettingsViewController: UIViewController {
         darkModeSwitch.isOn = UserDefaults.standard.bool(forKey: "DarkModeEnabled")
         let birthDate = UserDefaults.standard.object(forKey: "BirthDate") as? Date ?? Date()
         birthDatePicker.date = birthDate
-        emailTextField.text = UserDefaults.standard.string(forKey: "Email")
+        userName.text = "User: \(person.fullname)"
+        emailTextField.text = person?.email
         notificationsSwitch.isOn = UserDefaults.standard.bool(forKey: "NotificationsEnabled")
         brightnessSlider.value = UserDefaults.standard.float(forKey: "ScreenBrightness")
     }
@@ -45,11 +47,21 @@ class SettingsViewController: UIViewController {
         UIScreen.main.brightness = CGFloat(sender.value)
     }
     
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        UserDefaults.standard.set(birthDatePicker.date, forKey: "BirthDate")
+        if let email = emailTextField.text {
+            UserDefaults.standard.set(email, forKey: "Email")
+        }
+        
+        let alert = UIAlertController(title: "Saved", message: "Your settings have been saved.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+        
+        }
+    
     @IBAction func logoutButtonTapped(_ sender: UIButton) {
-        UserDefaults.standard.removeObject(forKey: "LoggedInUser")
-        if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
-               let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
-                sceneDelegate.window?.rootViewController = loginVC
+        if let loginVC = storyboard?.instantiateViewController(withIdentifier: "LoginViewController") {
+                navigationController?.pushViewController(loginVC, animated: true)
         }
     }
 }

@@ -130,6 +130,10 @@
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Save Changes "/>
+                                <connections>
+                                    <action selector="buttonSaveTapped:" destination="ku3-VC-BAo" eventType="touchUpInside" id="730-Oe-9cH"/>
+                                    <action selector="saveButtonTapped:" destination="ku3-VC-BAo" eventType="touchUpInside" id="sxw-6u-V7r"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eJJ-0r-XX3"/>
@@ -161,6 +165,7 @@
                         <outlet property="darkModeSwitch" destination="Veg-Co-3Z1" id="pbe-uS-5Cu"/>
                         <outlet property="emailTextField" destination="h7q-3u-sqv" id="cM3-Cw-c2n"/>
                         <outlet property="notificationsSwitch" destination="jZu-lB-gyb" id="kEJ-Oj-WsT"/>
+                        <outlet property="userName" destination="WJi-7s-e4E" id="J9d-IF-Axf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBH-PH-pC0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
