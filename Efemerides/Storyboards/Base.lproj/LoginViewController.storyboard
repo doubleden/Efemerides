@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PAy-Vs-Sp8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
@@ -9,79 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="t83-HH-Iwd">
-            <objects>
-                <viewController id="PAy-Vs-Sp8" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4kB-uO-WQa">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S0H-wg-lyx">
-                                <rect key="frame" x="16" y="94.333333333333329" width="361" height="51.999999999999986"/>
-                                <string key="text">Efemérides
-</string>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="45"/>
-                                <color key="textColor" name="mainYellow"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gei-HE-emv">
-                                <rect key="frame" x="16" y="205" width="361" height="178"/>
-                                <string key="text"> Наше приложение предназначенное для предоставления информации об исторических событиях, произошедших в определенный день. Оно предлагает пользователям уникальную возможность узнать о важных исторических датах.  Efemerides может использоваться как образовательный ресурс, так и для удовлетворения ежедневного любопытства пользователя о прошлом.                                    </string>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1g-YA-BIB">
-                                <rect key="frame" x="115.66666666666667" y="475.66666666666669" width="161.66666666666663" height="38.000000000000057"/>
-                                <color key="tintColor" name="mainYellow"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Обзор">
-                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
-                                    <color key="baseForegroundColor" white="0.13" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="YZ8-eY-v05"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* Это demo-версия приложения. Поиск событий осуществляеться только по январю" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stl-hq-bew">
-                                <rect key="frame" x="16" y="394.33333333333331" width="361" height="38"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Разработчики: Aidana, Carlos, Denis" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQK-Fr-k6p">
-                                <rect key="frame" x="16" y="544.66666666666663" width="361" height="20.333333333333371"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Mez-0y-hKi"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Gei-HE-emv" firstAttribute="top" secondItem="S0H-wg-lyx" secondAttribute="bottom" multiplier="1.4" id="18c-se-jDS"/>
-                            <constraint firstItem="S0H-wg-lyx" firstAttribute="leading" secondItem="Mez-0y-hKi" secondAttribute="leading" constant="16" id="3I4-9y-4Po"/>
-                            <constraint firstItem="Mez-0y-hKi" firstAttribute="trailing" secondItem="S0H-wg-lyx" secondAttribute="trailing" constant="16" id="7Ry-WS-yKo"/>
-                            <constraint firstItem="stl-hq-bew" firstAttribute="leading" secondItem="Mez-0y-hKi" secondAttribute="leading" constant="16" id="90U-6r-gFt"/>
-                            <constraint firstItem="M1g-YA-BIB" firstAttribute="width" secondItem="4kB-uO-WQa" secondAttribute="width" multiplier="0.411196" id="A7k-fS-CNM"/>
-                            <constraint firstItem="zQK-Fr-k6p" firstAttribute="top" secondItem="M1g-YA-BIB" secondAttribute="bottom" multiplier="1.06" id="C2D-ca-3AD"/>
-                            <constraint firstItem="Mez-0y-hKi" firstAttribute="trailing" secondItem="stl-hq-bew" secondAttribute="trailing" constant="16" id="DTU-1j-dM3"/>
-                            <constraint firstItem="S0H-wg-lyx" firstAttribute="top" secondItem="Mez-0y-hKi" secondAttribute="top" multiplier="1.6" id="FCH-7u-Zzc"/>
-                            <constraint firstItem="stl-hq-bew" firstAttribute="top" secondItem="Gei-HE-emv" secondAttribute="bottom" multiplier="1.03" id="Hdr-W9-iTz"/>
-                            <constraint firstItem="M1g-YA-BIB" firstAttribute="top" secondItem="stl-hq-bew" secondAttribute="bottom" multiplier="1.1" id="RK7-uU-COX"/>
-                            <constraint firstItem="zQK-Fr-k6p" firstAttribute="leading" secondItem="Mez-0y-hKi" secondAttribute="leading" constant="16" id="civ-vw-lQG"/>
-                            <constraint firstItem="Mez-0y-hKi" firstAttribute="trailing" secondItem="Gei-HE-emv" secondAttribute="trailing" constant="16" id="hKn-OQ-Qlc"/>
-                            <constraint firstItem="M1g-YA-BIB" firstAttribute="centerX" secondItem="4kB-uO-WQa" secondAttribute="centerX" id="l8D-lT-JUk"/>
-                            <constraint firstItem="Mez-0y-hKi" firstAttribute="trailing" secondItem="zQK-Fr-k6p" secondAttribute="trailing" constant="16" id="umh-qj-8os"/>
-                            <constraint firstItem="Gei-HE-emv" firstAttribute="leading" secondItem="Mez-0y-hKi" secondAttribute="leading" constant="16" id="xyK-Kw-Wp0"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fOz-LN-egW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-773" y="-23"/>
-        </scene>
         <!--LoginViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -91,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Sx-m8-c3e">
-                                <rect key="frame" x="75" y="60" width="243" height="52"/>
+                                <rect key="frame" x="75" y="119" width="243" height="52"/>
                                 <string key="text">Efemérides
 </string>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="45"/>
@@ -99,7 +26,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="2AE-gH-Kqr">
-                                <rect key="frame" x="25" y="145.66666666666666" width="343" height="105"/>
+                                <rect key="frame" x="25" y="222.33333333333337" width="343" height="105"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="User" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4ep-We-PUg">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
@@ -110,7 +37,7 @@
                                         <textInputTraits key="textInputTraits" returnKeyType="continue" textContentType="username"/>
                                     </textField>
                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1111" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nLN-VU-ld5">
-                                        <rect key="frame" x="0.0" y="65" width="343" height="40"/>
+                                        <rect key="frame" x="0.0" y="64.999999999999972" width="343" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="JWz-tQ-FXf"/>
                                         </constraints>
@@ -120,7 +47,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRX-9H-RJY">
-                                <rect key="frame" x="91.666666666666686" y="275.66666666666669" width="210" height="45"/>
+                                <rect key="frame" x="91.666666666666686" y="360" width="210" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="210" id="S9O-2G-YJ9"/>
                                     <constraint firstAttribute="height" constant="45" id="yPd-cB-QGA"/>
@@ -136,7 +63,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fyU-aD-8Zc">
-                                <rect key="frame" x="16" y="352.66666666666669" width="361" height="32"/>
+                                <rect key="frame" x="16" y="445.66666666666669" width="361" height="32"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1K-DV-naO">
                                         <rect key="frame" x="0.0" y="0.0" width="180.66666666666666" height="32"/>
