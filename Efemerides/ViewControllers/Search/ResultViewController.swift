@@ -8,8 +8,7 @@
 import UIKit
 
 class ResultViewController: UIViewController {
-    var selectedDate: Date?
-    var datastore: DataStore!
+    var foundEvent: Event?
     
     @IBOutlet weak var stackView: UIStackView!
     
@@ -19,31 +18,17 @@ class ResultViewController: UIViewController {
     }
 
     func updateUI() {
-         guard let selectedDate = selectedDate else {
-             return
-         }
+        guard let foundEvent = foundEvent else {
+            return
+        }
 
-         let dateFormatter = DateFormatter()
-         dateFormatter.dateFormat = "dd-MM-yyyy"
-         let selectedDateString = dateFormatter.string(from: selectedDate)
+        let titleLabel = UILabel()
+        titleLabel.text = foundEvent.title
 
-         let allEvents: [Event] = []
+        let descriptionLabel = UILabel()
+        descriptionLabel.text = foundEvent.description
 
-         let eventsForSelectedDate = allEvents.filter {
-             let eventDateString = "\($0.day)-\($0.month)-\($0.year)"
-             return eventDateString == selectedDateString
-         }
-
-         for event in eventsForSelectedDate {
-
-             let titleLabel = UILabel()
-             titleLabel.text = event.title
-
-             let descriptionLabel = UILabel()
-             descriptionLabel.text = event.description
-
-             stackView.addArrangedSubview(titleLabel)
-             stackView.addArrangedSubview(descriptionLabel)
-         }
-     }
- }
+        stackView.addArrangedSubview(titleLabel)
+        stackView.addArrangedSubview(descriptionLabel)
+    }
+}

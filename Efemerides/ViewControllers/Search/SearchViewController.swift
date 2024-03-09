@@ -10,11 +10,12 @@ import UIKit
 class SearchViewController: UIViewController, EventSearchable {
     
     @IBOutlet weak var datePicker: UIDatePicker!
+    
     var events: [Event]!
+    private var foundEvent: Event?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     @IBAction func findButtonTapped(_ sender: Any) {
@@ -23,17 +24,19 @@ class SearchViewController: UIViewController, EventSearchable {
             return
         }
         
-        let resultsVC = ResultViewController()
-        resultsVC.selectedDate = selectedDate
+        let allEvents = Event.getEvents()
         
-        performSegue(withIdentifier: "ShowResultsSegue", sender: self)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowResultsSegue" {
-            if let resultsVC = segue.destination as? ResultViewController {
-                resultsVC.selectedDate = datePicker.date
-            }
+        foundEvent = allEvents.first { event in
+            let eventDateString = "\(event.day).\(event.month).\(event.year)"
+            let selectedDateString = DateFormatter.localizedString(from: selectedDate, dateStyle: .short, timeStyle: .none)
+            return eventDateString == selectedDateString
+        }
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let resultsVC = storyboard.instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController {
+            resultsVC.foundEvent = foundEvent
+
+            navigationController?.pushViewController(resultsVC, animated: true)
         }
     }
 }

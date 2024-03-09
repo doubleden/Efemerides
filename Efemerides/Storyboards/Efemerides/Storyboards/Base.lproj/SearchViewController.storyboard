@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="2913.740458015267" y="272.53521126760563"/>
         </scene>
-        <!--Result View Controller-->
+        <!--ResultViewController-->
         <scene sceneID="Odt-Jh-7s9">
             <objects>
-                <viewController id="6GF-co-2VU" customClass="ResultViewController" customModule="Efemerides" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6GF-co-2VU" userLabel="ResultViewController" customClass="ResultViewController" customModule="Efemerides" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TLx-Yx-xwq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
