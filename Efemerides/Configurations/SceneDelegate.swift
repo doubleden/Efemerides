@@ -14,6 +14,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        let tabBarAppearance = UITabBarAppearance()
+        
+        tabBarAppearance.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.mainYellow]
+        tabBarAppearance.stackedLayoutAppearance.selected.iconColor = .mainYellow
+        UITabBar.appearance().standardAppearance = tabBarAppearance
+        
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.mainYellow]
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
