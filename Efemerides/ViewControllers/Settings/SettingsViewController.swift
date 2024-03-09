@@ -39,7 +39,19 @@ class SettingsViewController: UIViewController {
     }
     
     @objc func darkModeSwitchChanged(_ sender: UISwitch) {
-        UserDefaults.standard.set(sender.isOn, forKey: "DarkModeEnabled")
+        let isDarkModeEnabled = sender.isOn
+        UserDefaults.standard.set(isDarkModeEnabled, forKey: "DarkModeEnabled")
+        updateDarkModeAppearance(isDarkModeEnabled)
+    }
+
+    func updateDarkModeAppearance(_ isDarkModeEnabled: Bool) {
+        if isDarkModeEnabled {
+            view.backgroundColor = .black
+            userName.textColor = .white
+        } else {
+            view.backgroundColor = .white
+            userName.textColor = .black
+        }
     }
     
     @IBAction func brightnessSliderChanged(_ sender: UISlider) {
