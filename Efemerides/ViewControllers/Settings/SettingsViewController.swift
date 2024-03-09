@@ -13,8 +13,6 @@ class SettingsViewController: UIViewController {
     @IBOutlet var darkModeSwitch: UISwitch!
     @IBOutlet var birthDatePicker: UIDatePicker!
     @IBOutlet var emailTextField: UITextField!
-    @IBOutlet var notificationsSwitch: UISwitch!
-    @IBOutlet var brightnessSlider: UISlider!
     
     var person: Person!
     
@@ -29,9 +27,7 @@ class SettingsViewController: UIViewController {
         let birthDate = UserDefaults.standard.object(forKey: "BirthDate") as? Date ?? Date()
         birthDatePicker.date = birthDate
         userName.text = "User: \(person.fullname)"
-        emailTextField.text = person?.email
-        notificationsSwitch.isOn = UserDefaults.standard.bool(forKey: "NotificationsEnabled")
-        brightnessSlider.value = UserDefaults.standard.float(forKey: "ScreenBrightness")
+        //   emailTextField.text = person?.email
     }
     
     func customizeAppearance() {
@@ -43,7 +39,7 @@ class SettingsViewController: UIViewController {
         UserDefaults.standard.set(isDarkModeEnabled, forKey: "DarkModeEnabled")
         updateDarkModeAppearance(isDarkModeEnabled)
     }
-
+    
     func updateDarkModeAppearance(_ isDarkModeEnabled: Bool) {
         if isDarkModeEnabled {
             view.backgroundColor = .black
@@ -53,24 +49,17 @@ class SettingsViewController: UIViewController {
             userName.textColor = .black
         }
     }
-    
-    @IBAction func brightnessSliderChanged(_ sender: UISlider) {
-        UserDefaults.standard.set(sender.value, forKey: "ScreenBrightness")
-        UIScreen.main.brightness = CGFloat(sender.value)
-    }
-    
     @IBAction func saveButtonTapped(_ sender: Any) {
-        UserDefaults.standard.set(birthDatePicker.date, forKey: "BirthDate")
-        if let email = emailTextField.text {
-            UserDefaults.standard.set(email, forKey: "Email")
+        let selectedDate = birthDatePicker.date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        var selectedDateString = dateFormatter.string(from: selectedDate)
+        selectedDateString = person.birthdate
+        birthDatePicker.backgroundColor = UIColor.green
+        if let welcomeVC = storyboard?.instantiateViewController(withIdentifier: "WelcomeViewController") {
+            navigationController?.pushViewController(welcomeVC, animated: true)
         }
-        
-        let alert = UIAlertController(title: "Saved", message: "Your settings have been saved.", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
-        
-        }
-    
+    }
     @IBAction func logoutButtonTapped(_ sender: UIButton) {
         if let loginVC = storyboard?.instantiateViewController(withIdentifier: "LoginViewController") {
                 navigationController?.pushViewController(loginVC, animated: true)

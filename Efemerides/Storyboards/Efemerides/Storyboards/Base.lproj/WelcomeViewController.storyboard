@@ -12,7 +12,7 @@
         <!--WelcomeViewController-->
         <scene sceneID="CYO-3W-7va">
             <objects>
-                <viewController storyboardIdentifier="WelcomeViewController" title="WelcomeViewController" id="7uU-dH-kSw" customClass="WelcomeViewController" customModule="Efemerides" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeViewController" title="WelcomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7uU-dH-kSw" customClass="WelcomeViewController" customModule="Efemerides" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wz2-Hm-Cfi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
