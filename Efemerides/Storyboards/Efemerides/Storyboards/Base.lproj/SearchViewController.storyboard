@@ -17,26 +17,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feD-qx-YgR">
-                                <rect key="frame" x="168" y="408.66666666666669" width="57" height="35"/>
+                                <rect key="frame" x="168" y="565" width="57" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Find"/>
                                 <connections>
+                                    <action selector="findButtonTapped:" destination="8gK-1a-XpB" eventType="touchUpInside" id="eoe-vG-dhQ"/>
                                     <segue destination="6GF-co-2VU" kind="show" id="iYi-4U-39h"/>
                                 </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="RUL-lE-qz8">
+                                <rect key="frame" x="33" y="155" width="320" height="324"/>
+                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Do-D1-DOq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="feD-qx-YgR" firstAttribute="centerY" secondItem="7xc-FD-Mmd" secondAttribute="centerY" id="N8V-PQ-f22"/>
+                            <constraint firstItem="feD-qx-YgR" firstAttribute="top" secondItem="RUL-lE-qz8" secondAttribute="bottom" constant="86" id="80b-2Q-ubx"/>
+                            <constraint firstItem="RUL-lE-qz8" firstAttribute="leading" secondItem="0Do-D1-DOq" secondAttribute="leading" constant="33" id="C55-sZ-FVc"/>
+                            <constraint firstItem="feD-qx-YgR" firstAttribute="leading" secondItem="0Do-D1-DOq" secondAttribute="leading" constant="168" id="Uam-aF-d6f"/>
+                            <constraint firstItem="RUL-lE-qz8" firstAttribute="top" secondItem="0Do-D1-DOq" secondAttribute="top" id="Uy0-fL-zaV"/>
                             <constraint firstItem="feD-qx-YgR" firstAttribute="centerX" secondItem="7xc-FD-Mmd" secondAttribute="centerX" id="mqe-fv-t7C"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="H6d-Y7-rfS"/>
+                    <connections>
+                        <outlet property="datePicker" destination="RUL-lE-qz8" id="D5K-qR-KRa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGs-ic-adQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2915" y="273"/>
+            <point key="canvasLocation" x="2913.740458015267" y="272.53521126760563"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="Odt-Jh-7s9">
@@ -45,14 +55,23 @@
                     <view key="view" contentMode="scaleToFill" id="TLx-Yx-xwq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pe9-dM-6zw">
+                                <rect key="frame" x="79" y="168" width="235" height="516"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="XS9-tZ-Mhz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="eAp-3K-DsD"/>
+                    <connections>
+                        <outlet property="stackView" destination="pe9-dM-6zw" id="0sx-kq-YI6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZaS-UZ-L7C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3789" y="273"/>
+            <point key="canvasLocation" x="3788.5496183206105" y="272.53521126760563"/>
         </scene>
         <!--SearchNavigationBar-->
         <scene sceneID="2bR-O7-Do1">
