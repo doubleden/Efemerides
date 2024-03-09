@@ -17,14 +17,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3R-Iz-xgh">
-                                <rect key="frame" x="145" y="487.5" width="85" height="34.5"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Выйти">
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3R-Iz-xgh">
+                                <rect key="frame" x="134" y="485" width="96" height="37"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Выйти"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Выйти">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="17" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                     <color key="baseBackgroundColor" name="mainYellow"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="logoutButtonTapped:" destination="ku3-VC-BAo" eventType="touchUpInside" id="AVl-sp-54n"/>
+                                    <action selector="logoutButtonTapped:" destination="ku3-VC-BAo" eventType="touchUpInside" id="m8u-9p-IQ6"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="dBg-g6-kJO">
@@ -68,7 +78,7 @@
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Veg-Co-3Z1">
                                         <rect key="frame" x="294" y="0.0" width="51" height="31"/>
                                         <connections>
-                                            <action selector="toggleValueChanged:" destination="ku3-VC-BAo" eventType="valueChanged" id="rYi-Xr-dkN"/>
+                                            <action selector="toggleValueChanged:" destination="ku3-VC-BAo" eventType="valueChanged" id="fEq-Nc-5f0"/>
                                         </connections>
                                     </switch>
                                 </subviews>
@@ -77,14 +87,14 @@
                         <viewLayoutGuide key="safeArea" id="eJJ-0r-XX3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="H3R-Iz-xgh" firstAttribute="centerX" secondItem="Rv3-KN-Vyd" secondAttribute="centerX" id="9X0-0a-w6z"/>
+                            <constraint firstItem="H3R-Iz-xgh" firstAttribute="centerX" secondItem="Rv3-KN-Vyd" secondAttribute="centerX" constant="-5.5" id="9X0-0a-w6z"/>
                             <constraint firstItem="Rv3-KN-Vyd" firstAttribute="top" secondItem="eJJ-0r-XX3" secondAttribute="top" id="C3D-xS-ICR"/>
                             <constraint firstItem="eJJ-0r-XX3" firstAttribute="bottom" secondItem="H3R-Iz-xgh" secondAttribute="bottom" constant="145" id="Djb-8q-sDS"/>
-                            <constraint firstItem="H3R-Iz-xgh" firstAttribute="leading" secondItem="eJJ-0r-XX3" secondAttribute="leading" constant="145" id="Ycm-r4-vdn"/>
+                            <constraint firstItem="H3R-Iz-xgh" firstAttribute="leading" secondItem="eJJ-0r-XX3" secondAttribute="leading" constant="134" id="Ycm-r4-vdn"/>
                             <constraint firstItem="blF-pc-bgn" firstAttribute="leading" secondItem="eJJ-0r-XX3" secondAttribute="leading" constant="16" id="kPH-J5-mc6"/>
                             <constraint firstItem="ciu-o8-e5C" firstAttribute="leading" secondItem="eJJ-0r-XX3" secondAttribute="leading" constant="16" id="mgA-Bv-g5u"/>
                             <constraint firstItem="WJi-7s-e4E" firstAttribute="top" secondItem="Rv3-KN-Vyd" secondAttribute="bottom" constant="46" id="pQO-Ds-xg0"/>
-                            <constraint firstItem="H3R-Iz-xgh" firstAttribute="centerX" secondItem="eJJ-0r-XX3" secondAttribute="centerX" id="y2b-cb-K0a"/>
+                            <constraint firstItem="H3R-Iz-xgh" firstAttribute="centerX" secondItem="eJJ-0r-XX3" secondAttribute="centerX" constant="-5.5" id="y2b-cb-K0a"/>
                             <constraint firstItem="blF-pc-bgn" firstAttribute="top" secondItem="1em-rL-RPL" secondAttribute="bottom" constant="116.5" id="ySg-Uv-DVH"/>
                         </constraints>
                     </view>
@@ -92,8 +102,8 @@
                     <connections>
                         <outlet property="birthdate" destination="ciu-o8-e5C" id="imR-N1-GwE"/>
                         <outlet property="currentEmail" destination="1em-rL-RPL" id="KME-wx-A1o"/>
-                        <outlet property="darkModeSwitch" destination="Veg-Co-3Z1" id="pbe-uS-5Cu"/>
-                        <outlet property="logOutButton" destination="H3R-Iz-xgh" id="ckc-7h-pyw"/>
+                        <outlet property="darkModeSwitch" destination="Veg-Co-3Z1" id="pb9-AK-FuX"/>
+                        <outlet property="logOutButton" destination="H3R-Iz-xgh" id="WNh-0t-dhL"/>
                         <outlet property="userName" destination="WJi-7s-e4E" id="J9d-IF-Axf"/>
                     </connections>
                 </viewController>

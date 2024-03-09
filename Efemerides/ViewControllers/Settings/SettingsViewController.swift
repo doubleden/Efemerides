@@ -13,7 +13,6 @@ class SettingsViewController: UIViewController {
     @IBOutlet var birthdate: UILabel!
     @IBOutlet var darkModeSwitch: UISwitch!
     @IBOutlet var currentEmail: UILabel!
-    @IBOutlet var birthdayTextField: UITextField!
     @IBOutlet var logOutButton: UIButton!
     
     var person: Person!
