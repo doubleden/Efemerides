@@ -20,6 +20,7 @@ struct User {
 struct Person {
     let name: String
     let surname: String
+    let email: String
     
     let dayOfBirth: String
     let monthOfBirth: String
@@ -37,6 +38,7 @@ struct Person {
         Person(
             name: "Alexei",
             surname: "Efimov",
+            email: "classDJ@mail.ru",
             dayOfBirth: "05",
             monthOfBirth: "01",
             yearOfBirth: "1998"
