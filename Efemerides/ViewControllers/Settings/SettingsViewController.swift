@@ -2,21 +2,20 @@
 //  SettingsViewController.swift
 //  Efemerides
 //
-//  Created by Denis Denisov on 5/3/24.
+//  Created by Carlos Garcia on 7/3/24.
 //
 
 import UIKit
 
 class SettingsViewController: UIViewController {
     
-    var person: Person!
-    
     @IBOutlet weak var darkModeSwitch: UISwitch!
     @IBOutlet weak var birthDatePicker: UIDatePicker!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var notificationsSwitch: UISwitch!
     @IBOutlet weak var brightnessSlider: UISlider!
-    @IBOutlet weak var avatarImageView: UIImageView!
+    
+    var person: Person!
     
     override func viewDidLoad() {
         super.viewDidLoad()
