@@ -22,6 +22,7 @@
                                 <subviews>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="RUL-lE-qz8">
                                         <rect key="frame" x="20" y="5" width="320" height="324"/>
+                                        <color key="tintColor" name="mainYellow"/>
                                         <date key="minimumDate" timeIntervalSinceReferenceDate="-31582800">
                                             <!--2000-01-01 11:00:00 +0000-->
                                         </date>
@@ -30,7 +31,7 @@
                                         </date>
                                     </datePicker>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <color key="backgroundColor" name="mainYellow"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="RUL-lE-qz8" secondAttribute="trailing" constant="21" id="73r-ZX-LUm"/>
                                     <constraint firstAttribute="bottom" secondItem="RUL-lE-qz8" secondAttribute="bottom" constant="8" id="nYa-aR-mbd"/>
@@ -45,9 +46,11 @@
                                 </constraints>
                                 <color key="tintColor" name="mainYellow"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Find"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Find">
+                                    <color key="baseForegroundColor" name="mainFont"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <action selector="findButtonTapped:" destination="8gK-1a-XpB" eventType="touchUpInside" id="D3B-hx-P0A"/>
+                                    <action selector="findButtonTapped:" destination="8gK-1a-XpB" eventType="touchUpInside" id="yWp-0J-qH8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -84,7 +87,7 @@
                                 <rect key="frame" x="16" y="208" width="361" height="534"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82U-sg-Tpy">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82U-sg-Tpy">
                                         <rect key="frame" x="14" y="230" width="333" height="271"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
@@ -100,9 +103,11 @@
                                         <viewLayoutGuide key="contentLayoutGuide" id="Dje-6m-kFO"/>
                                         <viewLayoutGuide key="frameLayoutGuide" id="W4z-ee-acS"/>
                                     </scrollView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Re6-Wg-MvP">
-                                        <rect key="frame" x="14" y="38" width="333" height="170"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Re6-Wg-MvP">
+                                        <rect key="frame" x="14" y="35" width="333" height="170"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="170" id="hhU-Um-Ad3"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
@@ -117,6 +122,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XS9-tZ-Mhz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Re6-Wg-MvP" firstAttribute="leading" secondItem="XS9-tZ-Mhz" secondAttribute="leading" constant="30" id="qZa-kQ-Fup"/>
+                            <constraint firstItem="Re6-Wg-MvP" firstAttribute="top" secondItem="XS9-tZ-Mhz" secondAttribute="top" constant="187" id="rA3-qd-adj"/>
+                            <constraint firstItem="XS9-tZ-Mhz" firstAttribute="trailing" secondItem="Re6-Wg-MvP" secondAttribute="trailing" constant="30" id="szp-me-JVw"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eAp-3K-DsD"/>
                     <connections>
@@ -150,8 +160,15 @@
             <point key="canvasLocation" x="1989" y="273"/>
         </scene>
     </scenes>
+    <color key="tintColor" name="AccentColor"/>
     <resources>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mainFont">
+            <color red="0.14509803921568629" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="mainYellow">
             <color red="0.96470588235294119" green="0.81568627450980391" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

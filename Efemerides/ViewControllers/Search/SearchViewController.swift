@@ -11,7 +11,7 @@ class SearchViewController: UIViewController, EventSearchable {
     
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var dateView: UIView!
-        
+    
     var events: [Event]!
     private var foundEvent: Event?
     
@@ -25,22 +25,28 @@ class SearchViewController: UIViewController, EventSearchable {
             return
         }
         
-        dateView.layer.cornerRadius = 10
-        dateView.layer.masksToBounds = true
-
         let allEvents = Event.getEvents()
         
-        foundEvent = allEvents.first { event in
-            let eventDateString = "\(event.day).\(event.month)"
-            let selectedDateString = DateFormatter.localizedString(from: selectedDate, dateStyle: .short, timeStyle: .none).dropLast(5) //drop last 5 drops year
-            return eventDateString == selectedDateString
-        }
+        let date = datePicker.date
+        let calendar = Calendar.current
         
-        let storyboard = UIStoryboard(name: "SearchViewController", bundle: nil)
-        if let resultsVC = storyboard.instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController {
-            resultsVC.foundEvent = foundEvent
-
-            navigationController?.pushViewController(resultsVC, animated: true)
+        let day = calendar.component(.day, from: date)
+        let month = calendar.component(.month, from: date)
+        
+        let formatter = NumberFormatter()
+        formatter.minimumIntegerDigits = 2
+        
+        let formattedDay = formatter.string(from: NSNumber(value: day))
+        let formattedMonth = formatter.string(from: NSNumber(value: month))
+                    
+        foundEvent = findEvent(in: allEvents, byDay: formattedDay ?? "", andMonth: formattedMonth ?? "")
+        
+        if let foundEvent = foundEvent {
+            let storyboard = UIStoryboard(name: "SearchViewController", bundle: nil)
+            if let resultVC = storyboard.instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController {
+                resultVC.foundEvent = foundEvent
+                navigationController?.pushViewController(resultVC, animated: true)
+            }
         }
     }
 }
