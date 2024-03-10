@@ -261,5 +261,5 @@ final class DataStore {
         )
     ]
     
-    private init() {}
+  private init() {}
 }
