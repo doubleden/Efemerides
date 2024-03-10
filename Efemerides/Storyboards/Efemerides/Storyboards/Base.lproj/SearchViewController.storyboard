@@ -18,34 +18,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ff7-NK-a6s">
-                                <rect key="frame" x="16" y="167" width="361" height="337"/>
+                                <rect key="frame" x="16" y="175" width="361" height="337"/>
                                 <subviews>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="RUL-lE-qz8">
-                                        <rect key="frame" x="20" y="5" width="320" height="324"/>
-                                        <date key="minimumDate" timeIntervalSinceReferenceDate="-31582800">
-                                            <!--2000-01-01 11:00:00 +0000-->
+                                        <rect key="frame" x="20.666666666666657" y="6.6666666666666572" width="320" height="324"/>
+                                        <date key="minimumDate" timeIntervalSinceReferenceDate="-63082496716">
+                                            <!--0002-01-01 12:14:44 +0000-->
                                         </date>
-                                        <date key="maximumDate" timeIntervalSinceReferenceDate="-28990800">
-                                            <!--2000-01-31 11:00:00 +0000-->
+                                        <date key="maximumDate" timeIntervalSinceReferenceDate="-63079904716">
+                                            <!--0002-01-31 12:14:44 +0000-->
                                         </date>
                                     </datePicker>
                                 </subviews>
                                 <color key="backgroundColor" name="mainYellow"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="RUL-lE-qz8" secondAttribute="trailing" constant="21" id="73r-ZX-LUm"/>
-                                    <constraint firstAttribute="bottom" secondItem="RUL-lE-qz8" secondAttribute="bottom" constant="8" id="nYa-aR-mbd"/>
-                                    <constraint firstItem="RUL-lE-qz8" firstAttribute="leading" secondItem="Ff7-NK-a6s" secondAttribute="leading" constant="20" symbolic="YES" id="rta-bV-mUK"/>
-                                    <constraint firstItem="RUL-lE-qz8" firstAttribute="top" secondItem="Ff7-NK-a6s" secondAttribute="top" constant="5" id="zK3-ps-5VN"/>
+                                    <constraint firstItem="RUL-lE-qz8" firstAttribute="centerY" secondItem="Ff7-NK-a6s" secondAttribute="centerY" id="8NZ-aN-2m1"/>
+                                    <constraint firstItem="RUL-lE-qz8" firstAttribute="width" secondItem="Ff7-NK-a6s" secondAttribute="width" multiplier="0.886427" id="Zxs-rZ-4Gb"/>
+                                    <constraint firstItem="RUL-lE-qz8" firstAttribute="centerX" secondItem="Ff7-NK-a6s" secondAttribute="centerX" id="cgT-dh-sBX"/>
+                                    <constraint firstItem="RUL-lE-qz8" firstAttribute="height" secondItem="Ff7-NK-a6s" secondAttribute="height" multiplier="0.961424" id="n1g-pA-s4o"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hrb-aW-snQ">
-                                <rect key="frame" x="148" y="595" width="75" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="Z4P-Mw-45j"/>
-                                </constraints>
+                                <rect key="frame" x="129" y="588.66666666666663" width="135" height="34.333333333333371"/>
                                 <color key="tintColor" name="mainYellow"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Find">
+                                <buttonConfiguration key="configuration" style="filled" title="Найти">
                                     <color key="baseForegroundColor" name="mainFont"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -56,12 +53,12 @@
                         <viewLayoutGuide key="safeArea" id="0Do-D1-DOq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Hrb-aW-snQ" firstAttribute="leading" secondItem="0Do-D1-DOq" secondAttribute="leading" constant="148" id="Bpc-vZ-HSZ"/>
-                            <constraint firstItem="Ff7-NK-a6s" firstAttribute="top" secondItem="0Do-D1-DOq" secondAttribute="top" constant="12" id="BsF-Fv-Omu"/>
-                            <constraint firstItem="0Do-D1-DOq" firstAttribute="trailing" secondItem="Ff7-NK-a6s" secondAttribute="trailing" constant="16" id="Zue-iW-WsI"/>
-                            <constraint firstItem="0Do-D1-DOq" firstAttribute="bottom" secondItem="Hrb-aW-snQ" secondAttribute="bottom" constant="180" id="aM0-GR-viC"/>
-                            <constraint firstItem="Ff7-NK-a6s" firstAttribute="leading" secondItem="0Do-D1-DOq" secondAttribute="leading" constant="16" id="cHF-eq-rFE"/>
-                            <constraint firstItem="0Do-D1-DOq" firstAttribute="trailing" secondItem="Hrb-aW-snQ" secondAttribute="trailing" constant="170" id="du1-Ay-oUI"/>
+                            <constraint firstItem="Ff7-NK-a6s" firstAttribute="width" secondItem="7xc-FD-Mmd" secondAttribute="height" multiplier="361:852" id="5wq-uP-OFT"/>
+                            <constraint firstItem="Ff7-NK-a6s" firstAttribute="centerX" secondItem="7xc-FD-Mmd" secondAttribute="centerX" id="BHn-A1-0jb"/>
+                            <constraint firstItem="Hrb-aW-snQ" firstAttribute="top" secondItem="Ff7-NK-a6s" secondAttribute="bottom" multiplier="1.15" id="Gzg-CO-Nd2"/>
+                            <constraint firstItem="Hrb-aW-snQ" firstAttribute="centerX" secondItem="7xc-FD-Mmd" secondAttribute="centerX" id="f2f-2C-NiO"/>
+                            <constraint firstItem="Ff7-NK-a6s" firstAttribute="top" secondItem="0Do-D1-DOq" secondAttribute="top" constant="20" id="lHH-Cu-6wQ"/>
+                            <constraint firstItem="Hrb-aW-snQ" firstAttribute="width" secondItem="7xc-FD-Mmd" secondAttribute="width" multiplier="0.34419" id="peA-K7-lIc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="H6d-Y7-rfS"/>
