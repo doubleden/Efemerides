@@ -18,6 +18,7 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         view.layer.cornerRadius = 10
         view.layer.masksToBounds = true
         image.layer.cornerRadius = image.frame.height / 10
