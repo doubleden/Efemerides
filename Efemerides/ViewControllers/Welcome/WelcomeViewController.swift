@@ -20,7 +20,7 @@ final class WelcomeViewController: UIViewController, EventSearchable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeUserLabel.text = "Привет, \(person.fullname)!"
+        welcomeUserLabel.text = "Привет , \(person.name)!"
         birthdayLabel.text = "Твой день рождения \(person.birthdate)"
         
         miniView.layer.cornerRadius = 10
