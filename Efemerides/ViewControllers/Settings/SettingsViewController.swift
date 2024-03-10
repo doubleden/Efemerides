@@ -16,46 +16,53 @@ class SettingsViewController: UIViewController {
     @IBOutlet var logOutButton: UIButton!
     
     var person: Person!
+    private var isDarkModeEnabled: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        customizeAppearance()
-        logOutButton.isHidden = darkModeSwitch.isOn
         userName.text = "Пользователь: \(person.fullname)"
         birthdate.text = "День рождения: \(person.birthdate)"
         currentEmail.text = "Э.почта: \(person.email)"
+        customizeAppearance()
+        updateDarkModeAppearance(isDarkModeEnabled)
+        logOutButton.isHidden = true
     }
     
     func customizeAppearance() {
-        darkModeSwitch.addTarget(self, action: #selector(darkModeSwitchChanged(_:)), for: .valueChanged)
+        darkModeSwitch.isOn = isDarkModeEnabled
     }
+    func updateDarkModeAppearance(_ isDarkModeEnabled: Bool) {
+        if isDarkModeEnabled {
+                    view.backgroundColor = .white
+                    userName.textColor = .black
+                    birthdate.textColor = .black
+                    currentEmail.textColor = .black
+                    logOutButton.isHidden = true
+                } else {
+                    view.backgroundColor = .black
+                    userName.textColor = .white
+                    birthdate.textColor = .white
+                    currentEmail.textColor = .white
+                    logOutButton.isHidden = false
+            }
+        }
     
-    @objc func darkModeSwitchChanged(_ sender: UISwitch) {
-        let isDarkModeEnabled = sender.isOn
+    @IBAction func toggleValueChanged(_ sender: UISwitch) {
+        isDarkModeEnabled = sender.isOn
         UserDefaults.standard.set(isDarkModeEnabled, forKey: "DarkModeEnabled")
         updateDarkModeAppearance(isDarkModeEnabled)
     }
     
-    func updateDarkModeAppearance(_ isDarkModeEnabled: Bool) {
-        if isDarkModeEnabled {
-            view.backgroundColor = .black
-            userName.textColor = .white
-            birthdate.textColor = .white
-            currentEmail.textColor = .white
-            
-        } else {
-            view.backgroundColor = .white
-            userName.textColor = .black
-            birthdate.textColor = .black
-            currentEmail.textColor = .black
-        }
-    }
-    
-    @IBAction func toggleValueChanged(_ sender: UISwitch) {
-        logOutButton.isHidden = !sender.isOn
-    }
-    
     @IBAction func logoutButtonTapped(_ sender: UIButton) {
-        dismiss(animated: true)
+        let alert = UIAlertController(
+            title: "🖐️",
+            message: "Вы хотите выйти?",
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: "Да", style: .default, handler: { _ in
+            self.dismiss(animated: true)
+        }))
+        alert.addAction(UIAlertAction(title: "Нет", style: .cancel, handler: nil))
+        present(alert, animated: true)
     }
 }
