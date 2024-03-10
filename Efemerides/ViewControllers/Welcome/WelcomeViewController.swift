@@ -2,21 +2,21 @@
 //  WelcomeViewController.swift
 //  Efemerides
 //
-//  Created by Denis Denisov on 5/3/24.
+//  Created by Carlos Garcia on 5/3/24.
 //
 
 import UIKit
 
 final class WelcomeViewController: UIViewController, EventSearchable {
     
-    var person: Person!
-    var events: [Event]!
-    
     @IBOutlet var welcomeUserLabel: UILabel!
     @IBOutlet var birthdayLabel: UILabel!
     @IBOutlet var eventsLabel: UITextView!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var miniView: UIView!
+    
+    var person: Person!
+    var events: [Event]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
