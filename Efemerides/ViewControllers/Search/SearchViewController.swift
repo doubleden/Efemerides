@@ -22,7 +22,7 @@ final class SearchViewController: UIViewController, EventSearchable {
     }
     
     @IBAction func findButtonTapped(_ sender: Any) {
-        guard let selectedDate = datePicker?.date else {
+        guard (datePicker?.date) != nil else {
             print("datePicker is nil or its date property is nil")
             return
         }
@@ -44,11 +44,15 @@ final class SearchViewController: UIViewController, EventSearchable {
         foundEvent = findEvent(in: allEvents, byDay: formattedDay ?? "", andMonth: formattedMonth ?? "")
         
         if let foundEvent = foundEvent {
-            let storyboard = UIStoryboard(name: "SearchViewController", bundle: nil)
-            if let resultVC = storyboard.instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController {
-                resultVC.foundEvent = foundEvent
-                navigationController?.pushViewController(resultVC, animated: true)
-            }
+            navigateToResultViewController(foundEvent)
+        }
+    }
+
+    private func navigateToResultViewController(_ event: Event) {
+        let storyboard = UIStoryboard(name: "SearchViewController", bundle: nil)
+        if let resultVC = storyboard.instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController {
+            resultVC.foundEvent = event
+            navigationController?.pushViewController(resultVC, animated: true)
         }
     }
 }
