@@ -5,7 +5,7 @@
 //  Created by Denis Denisov on 5/3/24.
 //
 
-class DataStore {
+final class DataStore {
     
     static let shared = DataStore()
 
@@ -261,5 +261,5 @@ class DataStore {
         )
     ]
     
-    init() {}
+  private init() {}
 }

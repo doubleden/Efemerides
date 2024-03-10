@@ -16,32 +16,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feD-qx-YgR">
-                                <rect key="frame" x="168" y="565" width="57" height="35"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ff7-NK-a6s">
+                                <rect key="frame" x="16" y="167" width="361" height="337"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="RUL-lE-qz8">
+                                        <rect key="frame" x="20" y="5" width="320" height="324"/>
+                                        <date key="minimumDate" timeIntervalSinceReferenceDate="-31582800">
+                                            <!--2000-01-01 11:00:00 +0000-->
+                                        </date>
+                                        <date key="maximumDate" timeIntervalSinceReferenceDate="-28990800">
+                                            <!--2000-01-31 11:00:00 +0000-->
+                                        </date>
+                                    </datePicker>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="RUL-lE-qz8" secondAttribute="trailing" constant="21" id="73r-ZX-LUm"/>
+                                    <constraint firstAttribute="bottom" secondItem="RUL-lE-qz8" secondAttribute="bottom" constant="8" id="nYa-aR-mbd"/>
+                                    <constraint firstItem="RUL-lE-qz8" firstAttribute="leading" secondItem="Ff7-NK-a6s" secondAttribute="leading" constant="20" symbolic="YES" id="rta-bV-mUK"/>
+                                    <constraint firstItem="RUL-lE-qz8" firstAttribute="top" secondItem="Ff7-NK-a6s" secondAttribute="top" constant="5" id="zK3-ps-5VN"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hrb-aW-snQ">
+                                <rect key="frame" x="148" y="595" width="75" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="Z4P-Mw-45j"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Find"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 <connections>
-                                    <action selector="findButtonTapped:" destination="8gK-1a-XpB" eventType="touchUpInside" id="eoe-vG-dhQ"/>
-                                    <segue destination="6GF-co-2VU" kind="show" id="iYi-4U-39h"/>
+                                    <action selector="findButtonTapped:" destination="8gK-1a-XpB" eventType="touchUpInside" id="D3B-hx-P0A"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="RUL-lE-qz8">
-                                <rect key="frame" x="33" y="155" width="320" height="324"/>
-                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Do-D1-DOq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="feD-qx-YgR" firstAttribute="top" secondItem="RUL-lE-qz8" secondAttribute="bottom" constant="86" id="80b-2Q-ubx"/>
-                            <constraint firstItem="RUL-lE-qz8" firstAttribute="leading" secondItem="0Do-D1-DOq" secondAttribute="leading" constant="33" id="C55-sZ-FVc"/>
-                            <constraint firstItem="feD-qx-YgR" firstAttribute="leading" secondItem="0Do-D1-DOq" secondAttribute="leading" constant="168" id="Uam-aF-d6f"/>
-                            <constraint firstItem="RUL-lE-qz8" firstAttribute="top" secondItem="0Do-D1-DOq" secondAttribute="top" id="Uy0-fL-zaV"/>
-                            <constraint firstItem="feD-qx-YgR" firstAttribute="centerX" secondItem="7xc-FD-Mmd" secondAttribute="centerX" id="mqe-fv-t7C"/>
+                            <constraint firstItem="Hrb-aW-snQ" firstAttribute="leading" secondItem="0Do-D1-DOq" secondAttribute="leading" constant="148" id="Bpc-vZ-HSZ"/>
+                            <constraint firstItem="Ff7-NK-a6s" firstAttribute="top" secondItem="0Do-D1-DOq" secondAttribute="top" constant="12" id="BsF-Fv-Omu"/>
+                            <constraint firstItem="0Do-D1-DOq" firstAttribute="trailing" secondItem="Ff7-NK-a6s" secondAttribute="trailing" constant="16" id="Zue-iW-WsI"/>
+                            <constraint firstItem="0Do-D1-DOq" firstAttribute="bottom" secondItem="Hrb-aW-snQ" secondAttribute="bottom" constant="180" id="aM0-GR-viC"/>
+                            <constraint firstItem="Ff7-NK-a6s" firstAttribute="leading" secondItem="0Do-D1-DOq" secondAttribute="leading" constant="16" id="cHF-eq-rFE"/>
+                            <constraint firstItem="0Do-D1-DOq" firstAttribute="trailing" secondItem="Hrb-aW-snQ" secondAttribute="trailing" constant="170" id="du1-Ay-oUI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="H6d-Y7-rfS"/>
                     <connections>
                         <outlet property="datePicker" destination="RUL-lE-qz8" id="D5K-qR-KRa"/>
+                        <outlet property="dateView" destination="Ff7-NK-a6s" id="txa-bh-zXI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGs-ic-adQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -51,22 +73,55 @@
         <!--ResultViewController-->
         <scene sceneID="Odt-Jh-7s9">
             <objects>
-                <viewController id="6GF-co-2VU" userLabel="ResultViewController" customClass="ResultViewController" customModule="Efemerides" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6GF-co-2VU" userLabel="ResultViewController" customClass="ResultViewController" customModule="Efemerides" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TLx-Yx-xwq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pe9-dM-6zw">
-                                <rect key="frame" x="79" y="168" width="235" height="516"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KbL-4u-dKz">
+                                <rect key="frame" x="16" y="208" width="361" height="534"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stackView>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82U-sg-Tpy">
+                                        <rect key="frame" x="14" y="230" width="333" height="271"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcA-2W-GZn">
+                                                <rect key="frame" x="13" y="0.0" width="306" height="242"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pretium ex eget volutpat gravida. Phasellus bibendum est vitae lorem sollicitudin blandit. Curabitur imperdiet nisl eu ipsum scelerisque, at porta neque porttitor. Pellentesque a elit nec ligula fermentum aliquam in non tortor. </string>
+                                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="Dje-6m-kFO"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="W4z-ee-acS"/>
+                                    </scrollView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Re6-Wg-MvP">
+                                        <rect key="frame" x="14" y="38" width="333" height="170"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEa-r0-ygx">
+                                <rect key="frame" x="31" y="128" width="346" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XS9-tZ-Mhz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="eAp-3K-DsD"/>
                     <connections>
-                        <outlet property="stackView" destination="pe9-dM-6zw" id="0sx-kq-YI6"/>
+                        <outlet property="image" destination="Re6-Wg-MvP" id="G1f-GK-vd0"/>
+                        <outlet property="label" destination="gcA-2W-GZn" id="1CL-fZ-wgc"/>
+                        <outlet property="titleLabel" destination="pEa-r0-ygx" id="6Rf-Rt-mxp"/>
+                        <outlet property="yellowView" destination="KbL-4u-dKz" id="Odt-tO-0YE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZaS-UZ-L7C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -97,6 +152,9 @@
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

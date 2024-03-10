@@ -10,25 +10,21 @@ import UIKit
 class ResultViewController: UIViewController {
     var foundEvent: Event?
     
-    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet var image: UIImageView!
+    @IBOutlet var label: UILabel!
+    @IBOutlet weak var yellowView: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateUI()
-    }
+        
+        view.layer.cornerRadius = 10
+        view.layer.masksToBounds = true
+        image.layer.cornerRadius = image.frame.height / 10
 
-    func updateUI() {
-        guard let foundEvent = foundEvent else {
-            return
-        }
+        image.image = UIImage(named: foundEvent?.image ?? "")
+        label.text = foundEvent?.description
 
-        let titleLabel = UILabel()
-        titleLabel.text = foundEvent.title
-
-        let descriptionLabel = UILabel()
-        descriptionLabel.text = foundEvent.description
-
-        stackView.addArrangedSubview(titleLabel)
-        stackView.addArrangedSubview(descriptionLabel)
+        titleLabel.text = foundEvent?.title
     }
 }
