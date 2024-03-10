@@ -7,16 +7,18 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, EventSearchable {
+final class SearchViewController: UIViewController, EventSearchable {
     
-    @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet weak var dateView: UIView!
+    @IBOutlet var datePicker: UIDatePicker!
+    @IBOutlet var dateView: UIView!
     
     var events: [Event]!
     private var foundEvent: Event?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dateView.layer.cornerRadius = 10
+        dateView.layer.masksToBounds = true
     }
     
     @IBAction func findButtonTapped(_ sender: Any) {

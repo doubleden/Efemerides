@@ -7,24 +7,26 @@
 
 import UIKit
 
-class ResultViewController: UIViewController {
+final class ResultViewController: UIViewController {
+
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var text: UITextView!
+    @IBOutlet weak var miniVuew: UIView!
+    
     var foundEvent: Event?
-    
-    @IBOutlet var image: UIImageView!
-    @IBOutlet var label: UILabel!
-    @IBOutlet weak var yellowView: UIView!
-    @IBOutlet weak var titleLabel: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
+        miniVuew.layer.cornerRadius = 10
         view.layer.cornerRadius = 10
         view.layer.masksToBounds = true
         image.layer.cornerRadius = image.frame.height / 10
 
         image.image = UIImage(named: foundEvent?.image ?? "")
-        label.text = foundEvent?.description
+        text.text = foundEvent?.description
 
-        titleLabel.text = foundEvent?.title
+        label.text = foundEvent?.title
     }
 }
