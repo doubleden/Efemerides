@@ -36,8 +36,8 @@ struct Person {
     
     static func getPerson() -> Person {
         Person(
-            name: "Alexei",
-            surname: "Efimov",
+            name: "Алексей",
+            surname: "Ефимов",
             email: "classDJ@mail.ru",
             dayOfBirth: "05",
             monthOfBirth: "01",

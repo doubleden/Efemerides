@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+final class SettingsViewController: UIViewController {
     
     @IBOutlet var userName: UILabel!
     @IBOutlet var birthdate: UILabel!
@@ -16,36 +16,17 @@ class SettingsViewController: UIViewController {
     @IBOutlet var logOutButton: UIButton!
     
     var person: Person!
-    private var isDarkModeEnabled: Bool = true
+    private var isDarkModeEnabled = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         userName.text = "Пользователь: \(person.fullname)"
         birthdate.text = "День рождения: \(person.birthdate)"
-        currentEmail.text = "Э.почта: \(person.email)"
+        currentEmail.text = "email: \(person.email)"
         customizeAppearance()
         updateDarkModeAppearance(isDarkModeEnabled)
         logOutButton.isHidden = true
     }
-    
-    func customizeAppearance() {
-        darkModeSwitch.isOn = isDarkModeEnabled
-    }
-    func updateDarkModeAppearance(_ isDarkModeEnabled: Bool) {
-        if isDarkModeEnabled {
-                    view.backgroundColor = .white
-                    userName.textColor = .black
-                    birthdate.textColor = .black
-                    currentEmail.textColor = .black
-                    logOutButton.isHidden = true
-                } else {
-                    view.backgroundColor = .black
-                    userName.textColor = .white
-                    birthdate.textColor = .white
-                    currentEmail.textColor = .white
-                    logOutButton.isHidden = false
-            }
-        }
     
     @IBAction func toggleValueChanged(_ sender: UISwitch) {
         isDarkModeEnabled = sender.isOn
@@ -65,4 +46,24 @@ class SettingsViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Нет", style: .cancel, handler: nil))
         present(alert, animated: true)
     }
+    
+    private func customizeAppearance() {
+        darkModeSwitch.isOn = isDarkModeEnabled
+    }
+    
+    private func updateDarkModeAppearance(_ isDarkModeEnabled: Bool) {
+        if isDarkModeEnabled {
+                    view.backgroundColor = .white
+                    userName.textColor = .black
+                    birthdate.textColor = .black
+                    currentEmail.textColor = .black
+                    logOutButton.isHidden = true
+                } else {
+                    view.backgroundColor = .black
+                    userName.textColor = .white
+                    birthdate.textColor = .white
+                    currentEmail.textColor = .white
+                    logOutButton.isHidden = false
+            }
+        }
 }
