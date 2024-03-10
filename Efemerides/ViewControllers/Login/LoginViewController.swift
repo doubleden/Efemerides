@@ -31,8 +31,8 @@ final class LoginViewController: UIViewController {
         guard usernameTF.text == user.username,
               passwordTF.text == user.password else {
             showAlert(
-                withTitle: "Invalid login or password",
-                andMessage: "Please, enter correct login and password") {
+                withTitle: "Неверный логин или пароль",
+                andMessage: "Пожалуйста, введи корректные данные") {
                     guard self.passwordTF.text != "" else { return }
                     self.passwordTF.text = ""
                 }
@@ -48,9 +48,9 @@ final class LoginViewController: UIViewController {
     
     @IBAction func forgotAction(_ sender: UIButton) {
         if sender.tag == 0 {
-            showAlert(withTitle: "HI!", andMessage: "username is \(user.username)")
+            showAlert(withTitle: "Привет!", andMessage: "твой логин \(user.username)")
         } else {
-            showAlert(withTitle: "It secret shh...", andMessage: "password is \(user.password)")
+            showAlert(withTitle: "Только тихо это секрет...", andMessage: "твой пароль \(user.password)")
         }
     }
     
