@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -14,14 +14,14 @@
             <objects>
                 <viewController storyboardIdentifier="UIViewController-8gK-1a-XpB" id="8gK-1a-XpB" customClass="SearchViewController" customModule="Efemerides" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7xc-FD-Mmd">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ff7-NK-a6s">
-                                <rect key="frame" x="16" y="175" width="361" height="337"/>
+                                <rect key="frame" x="46" y="136" width="283" height="308"/>
                                 <subviews>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="RUL-lE-qz8">
-                                        <rect key="frame" x="20.666666666666657" y="6.6666666666666572" width="320" height="324"/>
+                                        <rect key="frame" x="16" y="6" width="251" height="296"/>
                                         <date key="minimumDate" timeIntervalSinceReferenceDate="-63082496716">
                                             <!--0002-01-01 12:14:44 +0000-->
                                         </date>
@@ -39,10 +39,11 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hrb-aW-snQ">
-                                <rect key="frame" x="129" y="588.66666666666663" width="135" height="34.333333333333371"/>
+                                <rect key="frame" x="123" y="510.5" width="129" height="38"/>
                                 <color key="tintColor" name="mainYellow"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Найти">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                                     <color key="baseForegroundColor" name="mainFont"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -76,25 +77,31 @@
             <objects>
                 <viewController storyboardIdentifier="ResultViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6GF-co-2VU" userLabel="ResultViewController" customClass="ResultViewController" customModule="Efemerides" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TLx-Yx-xwq">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiZ-Ix-wPF">
+                                <rect key="frame" x="16" y="30" width="343" height="26.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ec-fJ-tiJ">
-                                <rect key="frame" x="16" y="135.33333333333331" width="361" height="578.66666666666674"/>
+                                <rect key="frame" x="16" y="123" width="343" height="466.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jhu-KZ-a4W">
-                                        <rect key="frame" x="49.333333333333343" y="20" width="262.33333333333326" height="204.66666666666666"/>
+                                        <rect key="frame" x="47" y="20" width="249" height="165"/>
                                         <color key="backgroundColor" name="mainYellow"/>
                                     </imageView>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdP-sa-7WW">
-                                        <rect key="frame" x="5" y="244.66666666666663" width="351" height="330"/>
+                                        <rect key="frame" x="5" y="205" width="333" height="257.5"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NFm-nb-ED6">
-                                                <rect key="frame" x="16" y="8" width="319" height="314"/>
+                                                <rect key="frame" x="16" y="8" width="301" height="241.5"/>
                                                 <color key="backgroundColor" name="mainYellow"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen </string>
                                                 <color key="textColor" systemColor="labelColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                         </subviews>
@@ -122,22 +129,16 @@
                                     <constraint firstAttribute="trailing" secondItem="gdP-sa-7WW" secondAttribute="trailing" constant="5" id="x1g-Gi-Wcu"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QiZ-Ix-wPF">
-                                <rect key="frame" x="16" y="69" width="361" height="26.333333333333329"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XS9-tZ-Mhz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="XS9-tZ-Mhz" firstAttribute="trailing" secondItem="6ec-fJ-tiJ" secondAttribute="trailing" constant="16" id="00x-L8-9e5"/>
                             <constraint firstItem="XS9-tZ-Mhz" firstAttribute="trailing" secondItem="QiZ-Ix-wPF" secondAttribute="trailing" constant="16" id="0C5-Ea-gZz"/>
-                            <constraint firstItem="6ec-fJ-tiJ" firstAttribute="top" secondItem="QiZ-Ix-wPF" secondAttribute="bottom" constant="40" id="1et-8X-FJe"/>
+                            <constraint firstItem="6ec-fJ-tiJ" firstAttribute="top" secondItem="QiZ-Ix-wPF" secondAttribute="bottom" constant="66.5" id="1et-8X-FJe"/>
                             <constraint firstItem="QiZ-Ix-wPF" firstAttribute="top" secondItem="XS9-tZ-Mhz" secondAttribute="top" constant="10" id="Lez-wZ-hI5"/>
                             <constraint firstItem="6ec-fJ-tiJ" firstAttribute="leading" secondItem="XS9-tZ-Mhz" secondAttribute="leading" constant="16" id="O7j-g7-rJO"/>
-                            <constraint firstItem="XS9-tZ-Mhz" firstAttribute="bottom" secondItem="6ec-fJ-tiJ" secondAttribute="bottom" constant="104" id="f43-fn-R17"/>
+                            <constraint firstItem="XS9-tZ-Mhz" firstAttribute="bottom" secondItem="6ec-fJ-tiJ" secondAttribute="bottom" constant="77.5" id="f43-fn-R17"/>
                             <constraint firstItem="QiZ-Ix-wPF" firstAttribute="leading" secondItem="XS9-tZ-Mhz" secondAttribute="leading" constant="16" id="mug-dw-hJD"/>
                         </constraints>
                     </view>
@@ -160,7 +161,7 @@
                     <tabBarItem key="tabBarItem" title="Поиск" image="magnifyingglass" catalog="system" id="8EK-rf-lSi"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="x88-Le-dDt">
-                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
