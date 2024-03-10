@@ -127,7 +127,7 @@
                                 </constraints>
                                 <color key="tintColor" name="mainYellow"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Login">
+                                <buttonConfiguration key="configuration" style="filled" title="Войти">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                                     <color key="baseForegroundColor" white="0.13" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -142,7 +142,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="180.66666666666666" height="32"/>
                                         <color key="tintColor" red="0.87261312236689559" green="0.78365525878257081" blue="0.4243099270823717" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Forgot username?">
+                                        <buttonConfiguration key="configuration" style="plain" title="Забыли логин ?">
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleSubhead"/>
                                             <color key="baseForegroundColor" red="0.65658566024568343" green="0.58965054765291047" blue="0.31926612891920214" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
@@ -154,7 +154,7 @@
                                         <rect key="frame" x="180.66666666666663" y="0.0" width="180.33333333333337" height="32"/>
                                         <color key="tintColor" red="0.87261312236689559" green="0.78365525878257081" blue="0.4243099270823717" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Forgot password?">
+                                        <buttonConfiguration key="configuration" style="plain" title="Забыли пароль ?">
                                             <fontDescription key="titleFontDescription" style="UICTFontTextStyleSubhead"/>
                                             <color key="baseForegroundColor" red="0.65658566024568343" green="0.58965054765291047" blue="0.31926612891920214" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
