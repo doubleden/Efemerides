@@ -45,6 +45,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Найти">
                                     <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
                                     <color key="baseForegroundColor" name="mainFont"/>
+                                    <color key="baseBackgroundColor" name="mainYellow"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="findButtonTapped:" destination="8gK-1a-XpB" eventType="touchUpInside" id="yWp-0J-qH8"/>
