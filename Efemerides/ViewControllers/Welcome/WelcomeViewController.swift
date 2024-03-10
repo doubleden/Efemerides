@@ -20,8 +20,8 @@ final class WelcomeViewController: UIViewController, EventSearchable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeUserLabel.text = "Welcome, \(person.fullname)!"
-        birthdayLabel.text = "Your Birthday is on \(person.birthdate)"
+        welcomeUserLabel.text = "Привет, \(person.fullname)!"
+        birthdayLabel.text = "Твой день рождения \(person.birthdate)"
         
         miniView.layer.cornerRadius = 10
         miniView.layer.masksToBounds = true
@@ -32,6 +32,10 @@ final class WelcomeViewController: UIViewController, EventSearchable {
         imageView.image = UIImage(named: event?.image ?? "")
        
         
-        eventsLabel.text = "\(event?.year ?? "")-ом в этот же день было...\n\n\(event?.title ?? "")\n\n\(event?.description ?? "")"
+        eventsLabel.text = """
+            \(event?.year ?? "")-ом в этот же день было \(event?.title ?? "")
+            
+            \(event?.description ?? "")
+            """
     }
 }
