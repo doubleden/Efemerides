@@ -26,8 +26,10 @@ final class TabBarViewController: UITabBarController {
             case let welcomeVC as WelcomeViewController:
                 welcomeVC.person = person
                 welcomeVC.events = events
-            case let searchVC as SearchViewController:
-                searchVC.events = events
+            case let navigationVC as UINavigationController:
+                if let searchVC = navigationVC.topViewController as? SearchViewController {
+                    searchVC.events = events
+                }
             case let settingsVC as SettingsViewController:
                 settingsVC.person = person
             default:
