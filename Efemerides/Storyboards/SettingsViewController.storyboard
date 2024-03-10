@@ -98,7 +98,7 @@
                             <constraint firstItem="blF-pc-bgn" firstAttribute="top" secondItem="1em-rL-RPL" secondAttribute="bottom" constant="116.5" id="ySg-Uv-DVH"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" id="DfT-np-fcz"/>
+                    <tabBarItem key="tabBarItem" title="Настройки" image="gearshape" catalog="system" id="DfT-np-fcz"/>
                     <connections>
                         <outlet property="birthdate" destination="ciu-o8-e5C" id="imR-N1-GwE"/>
                         <outlet property="currentEmail" destination="1em-rL-RPL" id="KME-wx-A1o"/>

@@ -90,7 +90,7 @@
                             <constraint firstItem="kc9-Jy-gps" firstAttribute="leading" secondItem="gJ6-sD-Ywn" secondAttribute="leading" constant="16" id="qlb-aV-Drg"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Welcome" image="person" catalog="system" id="Hn4-LO-fxY"/>
+                    <tabBarItem key="tabBarItem" title="Главная" image="person" catalog="system" id="Hn4-LO-fxY"/>
                     <connections>
                         <outlet property="birthdayLabel" destination="Rcy-ar-8ut" id="0ni-PZ-gwc"/>
                         <outlet property="eventsLabel" destination="jEf-He-EbZ" id="U3E-I1-zk2"/>

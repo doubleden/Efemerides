@@ -58,7 +58,7 @@
         <scene sceneID="2bR-O7-Do1">
             <objects>
                 <navigationController storyboardIdentifier="SearchNavigationBar" title="SearchNavigationBar" automaticallyAdjustsScrollViewInsets="NO" id="S6M-Ba-rqM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="8EK-rf-lSi"/>
+                    <tabBarItem key="tabBarItem" title="Поиск" image="magnifyingglass" catalog="system" id="8EK-rf-lSi"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="x88-Le-dDt">
                         <rect key="frame" x="0.0" y="59" width="393" height="96"/>
